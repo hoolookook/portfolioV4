@@ -1,14 +1,126 @@
 * {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
+ol,
 ul,
 li,
 a {
   list-style: none;
+  color: #000;
   text-decoration: none;
-  color: black;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 body,
 input,
@@ -17,6 +129,14 @@ select,
 button,
 table {
   font-family: "돋움", Dotum, sans-serif;
+}
+
+a {
+  font-family: "Do Hyeon", sans-serif;
+  // font-family: "Roboto Mono", monospace;
+  color: var(--fontC);
+  text-transform: uppercase;
+  font-size: 24px;
 }
 /* IR 효과 */
 .ir_pm {
@@ -43,17 +163,6 @@ table {
   text-indent: -9999px;
 } /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
 
-// .sprite_img {
-//   background: url(/public/src/resources/images/sprites/sprite02.png) no-repeat;
-
-//   background-size: 206px 190px;
-//   display: inline-block;
-// }
-// .category_img {
-//   background: url(/public/src/resources/images/sprites/sprite06.png) no-repeat;
-//   background-size: 374px 1027px;
-//   display: inline-block;
-// }
 /* clearfix를 쓰는이유
      서브 메뉴가 있을수 있으므로  overflow: hidden 은 쓰지 않는다 <-서브메뉴가 가려지기 때문*/
 .clearfix {
