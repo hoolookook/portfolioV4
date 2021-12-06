@@ -1,0 +1,223 @@
+@import "../base/common.scss";
+$media_1: 194px;
+$media_2: 241px;
+$media_3: 307px;
+$media_3_2: 385px;
+$media_4: 405px;
+$media_5: 464px;
+$media_6: 799px;
+$media_7: 800px;
+$media_8: 990px;
+$media_9: 1542px;
+// header-----------------------------------------
+@media screen and (max-width: $media_4) {
+  #header {
+    .navBar {
+      ul {
+        li {
+          padding: 15px;
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $media_4) {
+  #header {
+    .navBar {
+      ul {
+        li {
+          padding: 12px;
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $media_2) {
+  #header {
+    .navBar {
+      ul {
+        li {
+          padding: 9px;
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $media_1) {
+  #header {
+    .navBar {
+      ul {
+        li {
+          padding: 5px;
+          a {
+            font-size: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+// -----------------------------------------------
+
+// intro------------------------------------------
+@media screen and (max-width: $media_4) {
+  #intro {
+    .introWrap {
+      h2,
+      .typeText {
+        font-size: 15px;
+      }
+    }
+  }
+}
+// -----------------------------------------------
+
+// contents---------------------------------------
+@media screen and (min-width: $media_8) and (max-width: $media_9) {
+  #contents {
+    .pageWrap {
+      grid-template-columns: repeat(2, 400px);
+      grid-template-rows: repeat(2, 400px);
+    }
+  }
+}
+
+@media screen and (max-width: $media_6) {
+  #contents {
+    padding: 100px 30px;
+    .pageWrap {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(200px, 4fr));
+      .page {
+        .title {
+          a {
+            font-size: 29px;
+          }
+        }
+        .pageDetail {
+          height: 100%;
+          overflow: hidden;
+          img {
+            height: max-content !important;
+          }
+          .buttonWrap {
+            .openPdf {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $media_5) {
+  #contents {
+    .pageWrap {
+      .page {
+        .title {
+          a {
+            font-size: 25px;
+          }
+        }
+        .pageDetail {
+          width: 80%;
+          margin: 0 auto;
+          transition: all 0.7s;
+          .buttonWrap {
+            .openPdf {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $media_3_2) {
+  #contents {
+    .pageWrap {
+      .page {
+        .title {
+          a {
+            font-size: 23px;
+          }
+        }
+        .pageDetail {
+          transition: all 0.7s;
+          width: 60%;
+          .buttonWrap {
+            .openPdf {
+              font-size: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $media_3) {
+  #contents {
+    .pageWrap {
+      .page {
+        .title {
+          a {
+            font-size: 19px;
+          }
+        }
+        .pageDetail {
+          transition: all 0.7s;
+          width: 50%;
+          .buttonWrap {
+            .openPdf {
+              font-size: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------
+
+// footer-----------------------------------------
+@media screen and (max-width: $media_6) {
+  #footer {
+    .profileWrap {
+      .profileL {
+        .profilePhoto {
+          img {
+          }
+        }
+        .profileContact {
+        }
+      }
+      .profileR {
+        .skills {
+          .sphereChartWrap {
+            .sphere {
+              .skillTitle {
+              }
+              .center {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// -----------------------------------------------
+
+// header-----------------------------------------
+
+// -----------------------------------------------

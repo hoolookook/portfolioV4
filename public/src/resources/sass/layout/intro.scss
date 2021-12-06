@@ -1,0 +1,33 @@
+@import "../base/common.scss";
+
+#intro {
+  min-width: $minWidth;
+  background-color: $bcgCB1;
+  border: $border;
+
+  border-top: none;
+  .introWrap {
+    @include commonWrap(100%, 100%);
+    flex-direction: column;
+    @include commonFont(30px, var(--fontC));
+    animation: opLv 3s ease-in-out infinite;
+
+    h2 {
+      padding-bottom: 20px;
+    }
+    .typeText {
+      height: 50px;
+
+      &::after {
+        font-size: 38px;
+        content: "|";
+        animation: none;
+      }
+    }
+    .showAnim.typeText {
+      &::after {
+        animation: blink 1s step-end infinite;
+      }
+    }
+  }
+}
