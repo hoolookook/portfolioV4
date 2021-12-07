@@ -1,69 +1,26 @@
-:root {
-  // color
-  --Green1: #519462;
-  --Green2: #457d53;
-  --Green3: #366141;
-  --Green4: #0b593d;
-  --Green5: #174c39;
-  --black1: #1c1b18;
-  --black2: #24221f;
-  --black3: #302e2a;
-  --fontC: #caa623;
-}
+// :root {
+//   // color
+//   --Green1: #519462;
+//   --Green2: #457d53;
+//   --Green3: #366141;
+//   --Green4: #0b593d;
+//   --Green5: #174c39;
+//   --black1: #1c1b18;
+//   --black2: #24221f;
+//   --black3: #302e2a;
+//   --fontC: #caa623;
+// }
+$fontC: #caa623;
+$Green1: #519462;
+$Green2: #457d53;
+$Green3: #366141;
+$Green4: #0b593d;
+$Green5: #174c39;
+$black1: #1c1b18;
+$black2: #24221f;
+$black3: #302e2a;
 $minWidth: 280px;
-$bcgCB1: var(--black1);
-$bcgCB2: var(--black2);
-$bcgCB3: var(--black3);
-$border: 3px dashed var(--fontC);
-
-html {
-  background-color: var(--black1);
-}
-body {
-  min-width: $minWidth;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-
-  #section,
-  #contents,
-  #intro,
-  #footer {
-    width: 100%;
-    min-width: $minWidth;
-    height: 100vh;
-    // min-height: -webkit-fill-available;
-    min-height: 1200px;
-  }
-  #header {
-    width: 100%;
-    min-width: $minWidth;
-    height: 75px;
-  }
-  #intro {
-    margin-top: -75px;
-    height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  &::-webkit-scrollbar {
-    background-color: $bcgCB1;
-    border-radius: 10px;
-    width: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    border: $border;
-    border-radius: 10px;
-    border-left: none;
-  }
-  &::-webkit-scrollbar-track-piece:start {
-    background: transparent;
-    margin-top: 80px;
-  }
-  &::-webkit-scrollbar-track-piece:end {
-    background: transparent;
-    margin-bottom: 0px;
-  }
-}
+$border: 3px dashed $fontC;
 
 @mixin commonWrap($width, $height) {
   width: $width;
@@ -78,8 +35,23 @@ body {
 @mixin commonFont($fontSize, $fontColor) {
   font-size: $fontSize;
   color: $fontColor;
+  font-family: "Do Hyeon", sans-serif;
+  text-transform: uppercase;
 }
-
+@mixin commonFlex($flexF, $justifyC, $alignI) {
+  display: flex;
+  flex-flow: $flexF;
+  justify-content: $justifyC;
+  align-items: $alignI;
+}
+@mixin borderBG($backgroundColor, $borderColor) {
+  background-color: $backgroundColor;
+  border: 3px dashed $borderColor;
+}
+@mixin WH($width, $height) {
+  width: $width;
+  height: $height;
+}
 // animation keyframes
 @keyframes opLv {
   0%,

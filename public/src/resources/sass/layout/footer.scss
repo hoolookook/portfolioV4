@@ -1,70 +1,47 @@
 @import "../base/common.scss";
 #footer {
   border-top: none;
-  border: 3px dashed var(--fontC);
-  background-color: var(--black3);
-  width: 100%;
-  height: 100%;
-  min-width: $minWidth;
+  border: $border;
+  background-color: $black1;
   .profileWrap {
-    padding: 25px;
-    max-width: 1340px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    @include commonFlex(row wrap, center, center);
     .profileL {
-      width: 40%;
-      float: left;
+      display: flex;
+      flex-flow: row wrap;
       .profilePhoto {
-        width: 40%;
-        float: left;
         img {
           border-radius: 50%;
-          width: calc(353px / 2);
-          height: calc(472px / 2);
+          width: 176px;
+          height: 236px;
         }
       }
       .profileContact {
-        text-align: center;
-        float: left;
-        width: 60%;
-        padding-top: 62px;
-        background-color: red;
-
+        padding: 0 25px;
+        @include commonFlex(column wrap, center, none);
         p {
-          font-size: 16px;
-          font-family: "Do Hyeon", sans-serif;
-          color: var(--fontC);
-          text-transform: uppercase;
-          padding: 0 15px;
-          span {
-            float: left;
-          }
-          padding-top: 15px;
+          @include commonFont(16px, $fontC);
+          padding: 5px 5px;
           &:last-child {
             a {
-              font-size: 16px;
+              vertical-align: text-bottom;
             }
           }
         }
       }
     }
     .profileR {
-      display: inline-block;
-      width: 60%;
-      //   background-color: blue;
+      display: flex;
+      flex-flow: row wrap;
       .skills {
-        background-color: blue;
-        text-align: center;
         p {
           span {
-            font-size: 16px;
-            font-family: "Do Hyeon", sans-serif;
-            color: var(--fontC);
-            text-transform: uppercase;
+            @include commonFont(16px, var(--fontC));
             font-weight: bold;
           }
         }
         .sphereChartWrap {
-          padding-top: 50px;
           .sphere {
             position: relative;
             display: inline-block;
@@ -74,21 +51,18 @@
             transition: 0.3s;
             background-color: red;
             .skillTitle {
-              color: var(--fontC);
-              font-size: 13px;
-              font-family: "Do Hyeon", sans-serif;
-              text-transform: uppercase;
               width: 100%;
               height: 100%;
               display: inline-block;
               strong {
+                @include commonFont(13px, var(--fontC));
+                vertical-align: top;
                 font-weight: bold;
               }
             }
             .center {
               font-size: 16px;
-              color: var(--fontC);
-              background: var(--black1);
+              background-color: $black1;
               display: block;
               position: absolute;
               top: 50%;

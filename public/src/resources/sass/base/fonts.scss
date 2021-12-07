@@ -1,0 +1,8 @@
+@import "../base/common.scss";
+
+body,
+a,
+button,
+p {
+  @include commonFont(24px, $fontC);
+}

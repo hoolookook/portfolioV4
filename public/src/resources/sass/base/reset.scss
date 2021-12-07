@@ -94,9 +94,10 @@ ul,
 li,
 a {
   list-style: none;
-  color: #000;
+
   text-decoration: none;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -122,21 +123,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body,
-input,
-textarea,
-select,
-button,
-table {
-  font-family: "돋움", Dotum, sans-serif;
-}
+// body,
+// input,
+// textarea,
+// select,
+// button,
+// table {
+//   // font-family: "돋움", Dotum, sans-serif;
+//   font-family: "Do Hyeon", sans-serif;
+//   color: var(--fontC);
+//   font-size: 24px;
+//   text-transform: uppercase;
+// }
 
 a {
-  font-family: "Do Hyeon", sans-serif;
+  // font-family: "Do Hyeon", sans-serif;
   // font-family: "Roboto Mono", monospace;
-  color: var(--fontC);
-  text-transform: uppercase;
-  font-size: 24px;
+  // color: var(--fontC);
+  // text-transform: uppercase;
+  // font-size: 24px;
 }
 /* IR 효과 */
 .ir_pm {

@@ -190,10 +190,13 @@ $media_9: 1542px;
 // -----------------------------------------------
 
 // footer-----------------------------------------
-@media screen and (max-width: $media_6) {
+@media screen and (max-width: 1118px) {
   #footer {
     .profileWrap {
+      flex-flow: column wrap;
+
       .profileL {
+        padding: 100px;
         .profilePhoto {
           img {
           }
@@ -208,6 +211,76 @@ $media_9: 1542px;
               .skillTitle {
               }
               .center {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 676px) {
+  #footer {
+    .profileWrap {
+      flex-flow: column wrap;
+
+      .profileL {
+        @include commonFlex(column row, center, center);
+        padding: 50px;
+        .profilePhoto {
+          img {
+          }
+        }
+        .profileContact {
+        }
+      }
+      .profileR {
+        .skills {
+          .sphereChartWrap {
+            .sphere {
+              .skillTitle {
+              }
+              .center {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 648px) {
+  #footer {
+    .profileWrap {
+      .profileL {
+        .profilePhoto {
+          img {
+          }
+        }
+        .profileContact {
+        }
+      }
+      .profileR {
+        .skills {
+          p {
+            span {
+              font-size: 14px;
+            }
+          }
+          .sphereChartWrap {
+            // @include commonFlex(column row, center, center);
+
+            .sphere {
+              @include WH(50px, 50px);
+
+              .skillTitle {
+                strong {
+                  font-size: 2px;
+                }
+              }
+              .center {
+                @include WH(32.5px, 32.5px);
+                line-height: 32.5px;
               }
             }
           }

@@ -4,9 +4,9 @@
     // display: none;
     width: 100%;
     position: fixed;
-    border: 3px dashed var(--fontC);
-    background-color: var(--black1);
-    z-index: 9999;
+    border: 3px dashed $fontC;
+    background-color: $black1;
+    z-index: 6;
     ul {
       text-align: center;
       li {

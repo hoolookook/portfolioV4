@@ -33,7 +33,7 @@
           font-size: 40px;
           text-decoration: none;
           &:visited {
-            color: var(--fontC);
+            color: $fontC;
           }
         }
         &:hover {
@@ -70,10 +70,10 @@
             float: left;
             width: 50%;
             height: 40px;
-            background-color: var(--black1);
+            background-color: $black1;
             font-size: 16px;
             font-family: "Do Hyeon", sans-serif;
-            color: var(--fontC);
+            color: $fontC;
             text-transform: uppercase;
             font-weight: bold;
             border: none;
@@ -86,7 +86,7 @@
               border-radius: 0 12px 12px 0;
             }
             &:hover {
-              background-color: var(--fontC);
+              background-color: $fontC;
               color: white;
             }
           }

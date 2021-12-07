@@ -2,14 +2,14 @@
 
 #intro {
   min-width: $minWidth;
-  background-color: $bcgCB1;
+  background-color: $black1;
   border: $border;
 
   border-top: none;
   .introWrap {
     @include commonWrap(100%, 100%);
     flex-direction: column;
-    @include commonFont(30px, var(--fontC));
+    @include commonFont(30px, $fontC);
     animation: opLv 3s ease-in-out infinite;
 
     h2 {
