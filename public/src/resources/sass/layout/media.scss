@@ -9,6 +9,12 @@ $media_6: 799px;
 $media_7: 800px;
 $media_8: 990px;
 $media_9: 1542px;
+// footer WH
+$sphereWH: 100px;
+$centerWHL: 65px;
+$profilePicW: 176px;
+$profilePicH: 236px;
+
 // header-----------------------------------------
 @media screen and (max-width: $media_4) {
   #header {
@@ -223,36 +229,10 @@ $media_9: 1542px;
   #footer {
     .profileWrap {
       flex-flow: column wrap;
-
+      align-items: stretch;
       .profileL {
-        @include commonFlex(column row, center, center);
+        @include commonFlex(column wrap, center, center);
         padding: 50px;
-        .profilePhoto {
-          img {
-          }
-        }
-        .profileContact {
-        }
-      }
-      .profileR {
-        .skills {
-          .sphereChartWrap {
-            .sphere {
-              .skillTitle {
-              }
-              .center {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 648px) {
-  #footer {
-    .profileWrap {
-      .profileL {
         .profilePhoto {
           img {
           }
@@ -271,7 +251,7 @@ $media_9: 1542px;
             // @include commonFlex(column row, center, center);
 
             .sphere {
-              @include WH(50px, 50px);
+              @include WH(calc($sphereWH/1.7), calc($sphereWH/1.7));
 
               .skillTitle {
                 strong {
@@ -279,8 +259,8 @@ $media_9: 1542px;
                 }
               }
               .center {
-                @include WH(32.5px, 32.5px);
-                line-height: 32.5px;
+                @include WH(calc($centerWHL/1.7), calc($centerWHL/1.7));
+                line-height: calc($centerWHL/1.7);
               }
             }
           }
@@ -289,6 +269,93 @@ $media_9: 1542px;
     }
   }
 }
+
+@media screen and (max-width: 405px) {
+  @include footRatio(1.2, 1, 1.8, 4px, 12px);
+  #footer {
+    .profileWrap {
+      .profileL {
+        padding: 0;
+      }
+      .profileR {
+        .skills {
+          .sphereChartWrap {
+            @include commonFlex(row wrap, space-around, center);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 638px) {
+  #footer {
+    .profileWrap {
+      .profileL {
+        padding: 0;
+      }
+    }
+  }
+}
+@media screen and (max-height: 532px) {
+  @include footRatio(1.5, 0.5, 1.4, 2px, 6px);
+}
+@media screen and (max-height: 514px) and (max-width: 481px) {
+  @include footRatio(2, 1.4, 1.8, 1px, 4px);
+}
+@media screen and (max-height: 442px) and (max-width: 339px) {
+  @include footRatio(3, 2, 3, 1px, 2px);
+
+  #footer {
+    .profileWrap {
+      .profileL {
+        padding: 0;
+        .profileContact {
+          padding: 5px 0px;
+        }
+      }
+      .profileR {
+        .skills {
+          .sphereChartWrap {
+            // @include commonFlex(column wrap, space-around, center);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 445px) and (max-width: 209px) {
+  #footer {
+    .profileWrap {
+      .profileL {
+        padding: 0;
+        .profileContact {
+          padding: 15px 10px;
+        }
+      }
+      .profileR {
+        .skills {
+          .sphereChartWrap {
+            @include commonFlex(column wrap, space-around, center);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 341px) and (max-width: 632px) {
+  #footer {
+    .profileWrap {
+      .profileR {
+        .skills {
+          .sphereChartWrap {
+            @include commonFlex(column wrap, flex-start, flex-start);
+          }
+        }
+      }
+    }
+  }
+}
+
 // -----------------------------------------------
 
 // header-----------------------------------------

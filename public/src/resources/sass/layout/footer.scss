@@ -1,6 +1,7 @@
 @import "../base/common.scss";
 #footer {
   border-top: none;
+  text-align: center;
   border: $border;
   background-color: $black1;
   .profileWrap {
@@ -18,8 +19,8 @@
         }
       }
       .profileContact {
-        padding: 0 25px;
-        @include commonFlex(column wrap, center, none);
+        padding: 50px 25px;
+        @include commonFlex(column wrap, space-around, flex-start);
         p {
           @include commonFont(16px, $fontC);
           padding: 5px 5px;
@@ -36,12 +37,14 @@
       flex-flow: row wrap;
       .skills {
         p {
+          padding-bottom: 20px;
           span {
             @include commonFont(16px, var(--fontC));
             font-weight: bold;
           }
         }
         .sphereChartWrap {
+          @include commonFlex(row wrap, center, center);
           .sphere {
             position: relative;
             display: inline-block;
@@ -55,7 +58,7 @@
               height: 100%;
               display: inline-block;
               strong {
-                @include commonFont(13px, var(--fontC));
+                @include commonFont(12px, $fontC);
                 vertical-align: top;
                 font-weight: bold;
               }
@@ -80,111 +83,3 @@
     }
   }
 }
-
-// #footer {
-//   border-top: none;
-//   border: 3px dashed var(--fontC);
-//   background-color: var(--black3);
-//   width: 100%;
-//   height: 100%;
-//   min-width: 333px;
-//   .profileWrap {
-//     padding: 25px;
-//     max-width: 1340px;
-//     margin: 0 auto;
-//     .profileL {
-//       width: 40%;
-//       float: left;
-//       .profilePhoto {
-//         width: 40%;
-//         float: left;
-//         img {
-//           border-radius: 50%;
-//           width: calc(353px / 2);
-//           height: calc(472px / 2);
-//         }
-//       }
-//       .profileContact {
-//         text-align: center;
-//         float: left;
-//         width: 60%;
-//         padding-top: 62px;
-//         background-color: red;
-
-//         p {
-//           font-size: 16px;
-//           font-family: "Do Hyeon", sans-serif;
-//           color: var(--fontC);
-//           text-transform: uppercase;
-//           padding: 0 15px;
-//           span {
-//             float: left;
-//           }
-//           padding-top: 15px;
-//           &:last-child {
-//             a {
-//               font-size: 16px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .profileR {
-//       display: inline-block;
-//       width: 60%;
-//       //   background-color: blue;
-//       .skills {
-//         background-color: blue;
-//         text-align: center;
-//         p {
-//           span {
-//             font-size: 16px;
-//             font-family: "Do Hyeon", sans-serif;
-//             color: var(--fontC);
-//             text-transform: uppercase;
-//             font-weight: bold;
-//           }
-//         }
-//         .sphereChartWrap {
-//           padding-top: 50px;
-//           .sphere {
-//             position: relative;
-//             display: inline-block;
-//             width: 100px;
-//             height: 100px;
-//             border-radius: 50%;
-//             transition: 0.3s;
-//             background-color: red;
-//             .skillTitle {
-//               color: var(--fontC);
-//               font-size: 13px;
-//               font-family: "Do Hyeon", sans-serif;
-//               text-transform: uppercase;
-//               width: 100%;
-//               height: 100%;
-//               display: inline-block;
-//               strong {
-//                 font-weight: bold;
-//               }
-//             }
-//             .center {
-//               font-size: 16px;
-//               color: var(--fontC);
-//               background: var(--black1);
-//               display: block;
-//               position: absolute;
-//               top: 50%;
-//               left: 50%;
-//               width: 65px;
-//               height: 65px;
-//               line-height: 65px;
-//               border-radius: 50%;
-//               text-align: center;
-//               transform: translate(-50%, -50%);
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

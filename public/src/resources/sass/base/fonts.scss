@@ -3,6 +3,9 @@
 body,
 a,
 button,
-p {
+p,
+strong {
+  font-family: "Do Hyeon", sans-serif;
+  text-transform: uppercase;
   @include commonFont(24px, $fontC);
 }

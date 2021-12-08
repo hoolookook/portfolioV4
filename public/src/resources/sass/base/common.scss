@@ -35,8 +35,6 @@ $border: 3px dashed $fontC;
 @mixin commonFont($fontSize, $fontColor) {
   font-size: $fontSize;
   color: $fontColor;
-  font-family: "Do Hyeon", sans-serif;
-  text-transform: uppercase;
 }
 @mixin commonFlex($flexF, $justifyC, $alignI) {
   display: flex;
@@ -51,6 +49,70 @@ $border: 3px dashed $fontC;
 @mixin WH($width, $height) {
   width: $width;
   height: $height;
+}
+
+@mixin footRatio(
+  $division,
+  $textDivision,
+  $ChartDivision,
+  $small_fontSize,
+  $big_fontSize
+) {
+  #footer {
+    .profileWrap {
+      .profileL {
+        .profilePhoto {
+          img {
+            @include WH(
+              calc($profilePicW/$division),
+              calc($profilePicH/$division)
+            );
+          }
+        }
+        .profileContact {
+          p {
+            font-size: calc($small_fontSize/$textDivision);
+            &:last-child {
+              a {
+                font-size: calc($big_fontSize/$textDivision);
+              }
+            }
+          }
+        }
+      }
+      .profileR {
+        .skills {
+          p {
+            span {
+              font-size: calc($big_fontSize/$textDivision);
+            }
+          }
+          .sphereChartWrap {
+            .sphere {
+              @include WH(
+                calc($sphereWH/$ChartDivision),
+                calc($sphereWH/$ChartDivision)
+              );
+
+              .skillTitle {
+                strong {
+                  font-size: calc($small_fontSize/$textDivision);
+                }
+              }
+              .center {
+                @include WH(
+                  calc($centerWHL/$ChartDivision),
+                  calc($centerWHL/$ChartDivision)
+                );
+                font-size: calc($big_fontSize/$textDivision);
+                line-height: calc($centerWHL/$ChartDivision);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // animation keyframes
 @keyframes opLv {
