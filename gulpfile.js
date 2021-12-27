@@ -22,7 +22,6 @@
 // npm install postcss@8.1.0
 //sass = require("gulp-sass")(require("sass"))
 // ---------------------------------------npm list----------------------------------------------------------------------------------------------------//
-
 // 패키지 변수
 const gulp = require("gulp"),
   del = require("del"),
@@ -106,26 +105,6 @@ var buildType = false, // build : false / dist : true
   distPath = "public/build/", //distributable
   htmlSrc = paths.html.src,
   imgSrc = paths.img.src;
-var AA = true,
-  AB = true,
-  AC = false,
-  AD = true,
-  AE = false,
-  AF = false,
-  AG = false,
-  AH = false;
-
-var update = "2021-08-10";
-/*
-AA : 메인,
-AB : 지원센터소개,
-AC : 권리자찾기,
-AD : 디지털저작권거래소,
-AE : 법정허락,
-AF : 상당한조사지원
-AG : 고객센터,
-AH : My Page
-*/
 function clean() {
   return del(`${distPath}*`);
 }
@@ -151,16 +130,7 @@ async function html() {
           version: version,
           prefix: prefix,
           suffix: suffix,
-          AA: AA,
-          AB: AB,
-          AC: AC,
-          AD: AD,
-          AE: AE,
-          AF: AF,
-          AG: AG,
-          AH: AH,
           buildType: buildType,
-          update: update,
         },
       })
     )

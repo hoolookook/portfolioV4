@@ -35,6 +35,8 @@
     .profileR {
       display: flex;
       flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
       .skills {
         p {
           padding-bottom: 20px;
