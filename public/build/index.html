@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hoolookook port</title>
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <!-- Latest compiled JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-    <script src="/public/src/resources/js/lib/main.js"></script>
 
+    <!-- js -->
+    <script src="/public/src/resources/js/lib/main.js" defer></script>
+
+    <!-- css -->
     <link rel="stylesheet" href="/public/build/resources/css/base/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
-        <header id="header">
+    <section id="header">
     <!-- <h1>김태근의 portfolio</h1> -->
     <div class="navBar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#contents">Work</a></li>
+            <li><a href="#footer">Profile</a></li>
         </ul>
     </div>
-</header>
-        <section id="intro">
+</section>
+    <section id="intro">
     <div class="introWrap" >
         <h2 tabindex="0">저는...</h2>
         <p class="typeText" tabindex="0"></p>
     </div>
 </section>
-        <section id="contents"> 
+    <section id="contents"> 
     <!-- <h2>Work</h2> -->
     <ul class="pageWrap">
         <li class="page Lotte">
@@ -82,7 +78,7 @@
     </ul>
 </section>
 
-        <footer id="footer">
+    <section id="footer">
     <!-- <h2>Contact</h2> -->
     <div class="profileWrap">
         <div class="profileL">
@@ -153,6 +149,6 @@
             </div>
         </div>
     </div>
-</footer>
+</section>
 </body>
 </html>

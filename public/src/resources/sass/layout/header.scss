@@ -6,6 +6,7 @@
     position: fixed;
     border: 3px dashed $fontC;
     background-color: $black1;
+    transition: all 0.3s;
     z-index: 6;
     ul {
       text-align: center;

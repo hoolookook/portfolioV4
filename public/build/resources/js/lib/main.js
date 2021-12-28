@@ -1,3 +1,21 @@
+var speed = 700;
+
+function scrolling(obj) {
+  if (!obj) {
+    $("html,body").animate({ scrollTop: 0 }, speed);
+  } else {
+    var posTop = $(obj).offset().top - 80;
+    $("html,body").animate({ scrollTop: posTop }, speed);
+  }
+}
+$("ul li a").click(function () {
+  // 네비게이션 클릭시
+  console.log("click!");
+  var direction = $(this).attr("href"); // direction = 클릭한 요소의 href 속성
+  scrolling(direction); // direction 을 인자로 함수 실행
+  return false; // 본래 이벤트 방지
+});
+
 // circle chart
 $(function () {
   $(window).ready(function () {
