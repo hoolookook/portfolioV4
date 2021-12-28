@@ -163,6 +163,7 @@
 }
 
 #contents .pageWrap .page .pageDetail {
+    border: 3px dashed #caa623;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;

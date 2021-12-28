@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>hoolookook port</title>
-	<!-- Latest compiled and minified CSS -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<!-- Latest compiled JavaScript -->
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-	<script src="/public/src/resources/js/lib/main.js"></script>
+	<!-- js -->
+	<script src="/public/dist/resources/js/lib/main.js" defer></script>
 
-	<link rel="stylesheet" href="/public/build/resources/css/base/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="/public/dist/resources/css/base/style.css">
 </head>
 
 <body>
-	<header id="header">
+	<section id="header">
 		<!-- <h1>김태근의 portfolio</h1> -->
 		<div class="navBar">
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Work</a></li>
-				<li><a href="#">Profile</a></li>
+				<li><a href="#intro">Home</a></li>
+				<li><a href="#contents">Work</a></li>
+				<li><a href="#footer">Profile</a></li>
 			</ul>
 		</div>
-	</header>
+	</section>
 	<section id="intro">
 		<div class="introWrap">
 			<h2 tabindex="0">저는...</h2>
@@ -46,8 +42,8 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/lotteCinemaScreenShotFit.png" alt="lotteCinemaPageScreenShot">
 					<div class="buttonWrap">
-						<button class="openPdf" onclick=" window.open('http://127.0.0.1:5503/public/build/index.html','_blank')"> PDF</button>
-						<button class="openPdf" onclick=" window.open('/public/src/resources/images/screenShot/lotteCinemaScreenShot.png','_blank')"> Clone</button>
+						<button class="openPdf" onclick=" window.open('/public/src/resources/images/screenShot/pdf_SC/lotteCinema.pdf','_blank')">PDF</button>
+						<button class="openPdf" onclick=" window.open('http://127.0.0.1:5503/public/build/index.html','_blank')">CLONE</button>
 					</div>
 				</div>
 			</li>
@@ -56,8 +52,8 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/naverScreenShotFit.png" alt="naverPageScreenShot">
 					<div class="buttonWrap">
-						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">PDF</button>
-						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/lotteCinemaScreenShot.png','_blank')">Clone</button>
+						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/pdf_SC/naverPort.pdf','_blank')">PDF</button>
+						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">CLONE</button>
 					</div>
 				</div>
 			</li>
@@ -66,8 +62,8 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/coupangScreenShotFit.png" alt="coupangPageScreenShot">
 					<div class="buttonWrap">
-						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">PDF</button>
-						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/lotteCinemaScreenShot.png','_blank')">Clone</button>
+						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/pdf_SC/coupang.pdf','_blank')">PDF</button>
+						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">CLONE</button>
 					</div>
 				</div>
 			</li>
@@ -76,15 +72,15 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/neungyuleScreenShotFit.png" alt="neungyulePageScreenShot">
 					<div class="buttonWrap">
-						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">PDF</button>
-						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/lotteCinemaScreenShot.png','_blank')">Clone</button>
+						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/pdf_SC/Neungyule.pdf','_blank')">PDF</button>
+						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">CLONE</button>
 					</div>
 				</div>
 			</li>
 		</ul>
 	</section>
 
-	<footer id="footer">
+	<section id="footer">
 		<!-- <h2>Contact</h2> -->
 		<div class="profileWrap">
 			<div class="profileL">
@@ -155,7 +151,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</section>
 </body>
 
 </html>

@@ -98,7 +98,7 @@
     border-top: none;
     text-align: center;
     border: 3px dashed #caa623;
-    background-color: #1c1b18;
+    border-top: none;
 }
 
 #footer .profileWrap {
@@ -256,7 +256,6 @@
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
-    background-color: red;
 }
 
 #footer .profileWrap .profileR .skills .sphereChartWrap .sphere .skillTitle {

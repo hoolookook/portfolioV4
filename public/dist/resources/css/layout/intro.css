@@ -96,8 +96,8 @@
 
 #intro {
     min-width: 280px;
-    background-color: #1c1b18;
     border: 3px dashed #caa623;
+    border-bottom: none;
     border-top: none;
 }
 

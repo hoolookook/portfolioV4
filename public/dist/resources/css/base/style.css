@@ -103,6 +103,12 @@ a {
     text-decoration: none;
 }
 
+section {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -355,6 +361,9 @@ strong {
     position: fixed;
     border: 3px dashed #caa623;
     background-color: #1c1b18;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
     z-index: 6;
 }
 
@@ -401,8 +410,8 @@ strong {
 
 #intro {
     min-width: 280px;
-    background-color: #1c1b18;
     border: 3px dashed #caa623;
+    border-bottom: none;
     border-top: none;
 }
 
@@ -563,6 +572,7 @@ strong {
 }
 
 #contents .pageWrap .page .pageDetail {
+    border: 3px dashed #caa623;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
@@ -661,7 +671,7 @@ strong {
     border-top: none;
     text-align: center;
     border: 3px dashed #caa623;
-    background-color: #1c1b18;
+    border-top: none;
 }
 
 #footer .profileWrap {
@@ -819,7 +829,6 @@ strong {
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
-    background-color: red;
 }
 
 #footer .profileWrap .profileR .skills .sphereChartWrap .sphere .skillTitle {
@@ -1393,10 +1402,8 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track-piece:start {
     background: transparent;
-    margin-top: 80px;
 }
 
 body::-webkit-scrollbar-track-piece:end {
     background: transparent;
-    margin-bottom: 0px;
 }
