@@ -95,6 +95,7 @@
 }
 
 #header .navBar {
+    display: none;
     width: 100%;
     position: fixed;
     border: 3px dashed #caa623;

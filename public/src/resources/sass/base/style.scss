@@ -13,6 +13,8 @@ html {
 body {
   min-width: $minWidth;
   display: grid;
+  border-top: $border;
+  // border-top: $border;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   #section,

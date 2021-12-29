@@ -57,7 +57,7 @@ $(function () {
       });
       $("#intro").css({
         "margin-top": 0,
-        "border-top": "3px dashed #caa623",
+        // "border-top": "3px dashed #caa623",
       });
     }
     function down() {

@@ -357,6 +357,7 @@ strong {
 }
 
 #header .navBar {
+    display: none;
     width: 100%;
     position: fixed;
     border: 3px dashed #caa623;
@@ -1359,6 +1360,7 @@ html {
 body {
     min-width: 280px;
     display: grid;
+    border-top: 3px dashed #caa623;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }
