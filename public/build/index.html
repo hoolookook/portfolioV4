@@ -10,18 +10,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- js -->
-    <!-- <script src="/public/build/resources/js/lib/main.js" defer></script> -->
-    <script src="/public/dist/resources/js/lib/main.js" defer></script>
+    <script src="/public/build/resources/js/lib/main.js" defer></script>
 
     <!-- css -->
-    <!-- <link rel="stylesheet" href="/public/build/resources/css/base/style.css?ver=1"> -->
-    <link rel="stylesheet" href="/public/dist/resources/css/base/style.css">
+    <link rel="stylesheet" href="/public/build/resources/css/base/style.css">
+    
 </head>
 <body>
     <section id="header">
-    <!-- <h1>김태근의 portfolio</h1> -->
+    <h1 class="ir_so">김태근의 portfolio</h1>
     <div class="navBar">
-        <ul>
+        <ul class="navUl">
             <li><a href="#intro">Home</a></li>
             <li><a href="#contents">Work</a></li>
             <li><a href="#footer">Profile</a></li>
@@ -35,10 +34,10 @@
     </div>
 </section>
     <section id="contents"> 
-    <!-- <h2>Work</h2> -->
+    <h2 class="ir_so">Work</h2>
     <ul class="pageWrap">
         <li class="page Lotte">
-            <div class="title"><a href="#">Lotte</a></div>
+            <div class="title"><h3 href="#">Lotte</h3></div>
             <div class="pageDetail">
                 <img src="/public/src/resources/images/screenShot/lotteCinemaScreenShotFit.png" alt="lotteCinemaPageScreenShot">
                 <div class="buttonWrap">
@@ -48,7 +47,7 @@
             </div>
         </li>
         <li class="page Naver">
-            <div class="title"><a href="#">naver</a></div>
+            <div class="title"><h3 href="#">naver</h3></div>
             <div class="pageDetail">
                 <img src="/public/src/resources/images/screenShot/naverScreenShotFit.png" alt="naverPageScreenShot">
                 <div class="buttonWrap">
@@ -58,7 +57,7 @@
             </div>
         </li>
         <li class="page Coupang">
-            <div class="title"><a href="#">coupang</a></div>
+            <div class="title"><h3 href="#">coupang</h3></div>
             <div class="pageDetail">
                 <img src="/public/src/resources/images/screenShot/coupangScreenShotFit.png" alt="coupangPageScreenShot">
                 <div class="buttonWrap">
@@ -68,7 +67,7 @@
             </div>
         </li>
         <li class="page Neungyule">
-            <div class="title"><a href="#">neungyule</a></div>
+            <div class="title"><h3 href="#">neungyule</h3></div>
             <div class="pageDetail">
                 <img src="/public/src/resources/images/screenShot/neungyuleScreenShotFit.png" alt="neungyulePageScreenShot">
                 <div class="buttonWrap">
@@ -81,7 +80,7 @@
 </section>
 
     <section id="footer">
-    <!-- <h2>Contact</h2> -->
+    <h2 class="ir_so">Contact</h2>
     <div class="profileWrap">
         <div class="profileL">
             <div class="profilePhoto">
@@ -90,7 +89,7 @@
             <div class="profileContact">
                 <p><span>Name&nbsp;&nbsp;&nbsp;</span>김태근</p>
                 <p><span>Phone&nbsp;&nbsp;</span>010.5125.2560</p>
-                <p><span>Github&nbsp;&nbsp;</span><a href="https://github.com/hoolookook">hoolookook</a></p>
+                <p><span>Github&nbsp;&nbsp;</span><a href="https://github.com/hoolookook" target="_blank">hoolookook</a></p>
             </div>
         </div>
         <div class="profileR">
@@ -152,5 +151,12 @@
         </div>
     </div>
 </section>
+    <div id="fixedWrap">
+    <button type="button" id="upicon" ></button>
+    <div class="fixed Top"></div>
+    <div class="fixed Bottom"></div>
+    <div class="fixed Left"></div>
+    <div class="fixed Right"></div>
+</div>
 </body>
 </html>

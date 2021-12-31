@@ -1,15 +1,16 @@
 @import "../base/common.scss";
 #header {
   .navBar {
-    display: none;
+    // display: none;
     width: 100%;
     position: fixed;
-    border: 3px dashed $fontC;
+    border-top: 3px dashed $fontC;
+    // border-top: none;
     background-color: $black1;
-    transition: all 0.3s;
     z-index: 6;
-    ul {
+    .navUl {
       text-align: center;
+      display: none;
       li {
         display: inline-block;
         padding: 25px;

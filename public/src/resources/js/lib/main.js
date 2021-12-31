@@ -52,23 +52,21 @@ $(function () {
     console.log("현재 스크롤 값은 " + $(window).scrollTop());
 
     function up() {
-      $("#header").css({
-        display: "none",
-      });
-      $("#intro").css({
-        "margin-top": 0,
-        // "border-top": "3px dashed #caa623",
-      });
+      $(".navBar").fadeOut();
+      $(".navBar .navUl").fadeOut();
     }
     function down() {
-      $("#header").css({
-        display: "block",
-      });
-      $("#intro").css({
-        "margin-top": "-75px",
-      });
+      $(".navBar")
+        .css({
+          "border-bottom": "3px dashed #caa623",
+        })
+        .fadeIn();
+      $(".navBar .navUl")
+        .css({
+          display: "block",
+        })
+        .fadeIn();
     }
-
     if (scrollNum >= 100) {
       down();
     } else {
@@ -79,8 +77,30 @@ $(function () {
     } else {
       circleBull = true;
     }
+
+    // refresh scroll top
+    // if (history.scrollRestoration) {
+    //   history.scrollRestoration = "manual";
+    // } else {
+    //   window.onbeforeunload = function () {
+    //     window.scrollTo(0, 0);
+    //   };
+    // }
   });
 
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 300) {
+        $("#upicon").fadeIn();
+      } else {
+        $("#upicon").fadeOut();
+      }
+    });
+    $("#upicon").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 400);
+      return false;
+    });
+  });
   // circle chart
   function circleChart() {
     $(window).ready(function () {

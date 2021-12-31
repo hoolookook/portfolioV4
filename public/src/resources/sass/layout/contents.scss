@@ -6,8 +6,8 @@
   padding: 0 30px;
   background-color: var(--black2);
   // background-color: pink;
-  border-left: $border;
-  border-right: $border;
+  // border-left: $border;
+  // border-right: $border;
   display: block;
 
   .pageWrap {
@@ -30,11 +30,14 @@
         z-index: 5;
         display: inline-block;
 
-        a {
+        h3 {
           font-size: 40px;
           text-decoration: none;
           &:visited {
             color: $fontC;
+          }
+          &:hover {
+            cursor: default;
           }
         }
         &:hover {
@@ -89,6 +92,7 @@
             &:hover {
               background-color: $fontC;
               color: white;
+              cursor: pointer;
             }
           }
         }

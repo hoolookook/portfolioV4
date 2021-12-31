@@ -2,8 +2,8 @@
 #footer {
   border-top: none;
   text-align: center;
-  border: $border;
-  border-top: none;
+  // border: $border;
+  // border-top: none;
   // background-color: $black1;
   // background-color: red;
   .profileWrap {
@@ -49,6 +49,7 @@
         }
         .sphereChartWrap {
           @include commonFlex(row wrap, center, center);
+          column-gap: 10px;
           .sphere {
             position: relative;
             display: inline-block;
