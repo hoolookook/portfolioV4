@@ -10,14 +10,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- js -->
-    <script src="/public/build/resources/js/lib/main.js" defer></script>
+    <!--js 편집 끝나면 build로 다시 바꿔 -->
+    <script src="/public/src/resources/js/lib/main.js" defer></script>
 
     <!-- css -->
     <link rel="stylesheet" href="/public/build/resources/css/base/style.css">
     
+    
 </head>
 <body>
-    <section id="header">
+    <!-- <p>
+		<a href="http://validator.kldp.org/check?uri=referer"
+		onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+		src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+	</p> -->
+	<!-- <p>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="올바른 CSS입니다!" />
+		</a>
+	</p> -->
+<section id="header">
     <h1 class="ir_so">김태근의 portfolio</h1>
     <div class="navBar">
         <ul class="navUl">
@@ -27,13 +41,13 @@
         </ul>
     </div>
 </section>
-    <section id="intro">
+    <section id="intro" class="scroll">
     <div class="introWrap" >
         <h2 tabindex="0">저는...</h2>
         <p class="typeText" tabindex="0"></p>
     </div>
 </section>
-    <section id="contents"> 
+    <section id="contents" class="scroll"> 
     <h2 class="ir_so">Work</h2>
     <ul class="pageWrap">
         <li class="page Lotte">
@@ -79,7 +93,7 @@
     </ul>
 </section>
 
-    <section id="footer">
+    <section id="footer" class="scroll">
     <h2 class="ir_so">Contact</h2>
     <div class="profileWrap">
         <div class="profileL">
@@ -158,5 +172,8 @@
     <div class="fixed Left"></div>
     <div class="fixed Right"></div>
 </div>
+
+
+
 </body>
 </html>

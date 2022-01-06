@@ -357,22 +357,20 @@ strong {
 }
 
 #header .navBar {
-    display: none;
     width: 100%;
     position: fixed;
-    border: 3px dashed #caa623;
+    border-top: 3px dashed #caa623;
     background-color: #1c1b18;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
     z-index: 6;
 }
 
-#header .navBar ul {
+#header .navBar .navUl {
     text-align: center;
+    display: none;
+    border-bottom: 3px dashed #caa623;
 }
 
-#header .navBar ul li {
+#header .navBar .navUl li {
     display: inline-block;
     padding: 25px;
 }
@@ -411,7 +409,6 @@ strong {
 
 #intro {
     min-width: 280px;
-    border: 3px dashed #caa623;
     border-bottom: none;
     border-top: none;
 }
@@ -510,8 +507,6 @@ strong {
     height: 100vh;
     padding: 0 30px;
     background-color: var(--black2);
-    border-left: 3px dashed #caa623;
-    border-right: 3px dashed #caa623;
     display: block;
 }
 
@@ -549,13 +544,17 @@ strong {
     display: inline-block;
 }
 
-#contents .pageWrap .page .title a {
+#contents .pageWrap .page .title h3 {
     font-size: 40px;
     text-decoration: none;
 }
 
-#contents .pageWrap .page .title a:visited {
+#contents .pageWrap .page .title h3:visited {
     color: #caa623;
+}
+
+#contents .pageWrap .page .title h3:hover {
+    cursor: default;
 }
 
 #contents .pageWrap .page .title:hover {
@@ -634,6 +633,7 @@ strong {
 #contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover {
     background-color: #caa623;
     color: white;
+    cursor: pointer;
 }
 
 @keyframes opLv {
@@ -671,8 +671,6 @@ strong {
 #footer {
     border-top: none;
     text-align: center;
-    border: 3px dashed #caa623;
-    border-top: none;
 }
 
 #footer .profileWrap {
@@ -817,6 +815,9 @@ strong {
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
 }
 
 #footer .profileWrap .profileR .skills .sphereChartWrap .sphere {
@@ -863,6 +864,89 @@ strong {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+@keyframes opLv {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#fixedWrap {
+    z-index: 6;
+}
+
+#fixedWrap #upicon {
+    background: url(/public/src/resources/images/screenShot/upArrow.png) no-repeat center center;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#fixedWrap .fixed {
+    position: fixed;
+}
+
+#fixedWrap .Top {
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 3px dashed #caa623;
+}
+
+#fixedWrap .Bottom {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 3px dashed #caa623;
+}
+
+#fixedWrap .Left {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    top: 0;
+    left: 0;
+    border-left: 3px dashed #caa623;
+}
+
+#fixedWrap .Right {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    top: 0;
+    right: 0;
+    border-right: 3px dashed #caa623;
 }
 
 @keyframes opLv {
@@ -1360,7 +1444,6 @@ html {
 body {
     min-width: 280px;
     display: grid;
-    border-top: 3px dashed #caa623;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }

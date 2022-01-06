@@ -11,6 +11,8 @@
     right: 15px;
     bottom: 15px;
     border: none;
+    cursor: pointer;
+    transform: rotateX(180deg);
   }
   .fixed {
     position: fixed;

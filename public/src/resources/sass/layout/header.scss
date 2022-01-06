@@ -11,9 +11,16 @@
     .navUl {
       text-align: center;
       display: none;
+      border-bottom: 3px dashed $fontC;
       li {
         display: inline-block;
         padding: 25px;
+        .on {
+          a {
+            background-color: #fff;
+            color: black;
+          }
+        }
       }
     }
   }

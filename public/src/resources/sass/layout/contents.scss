@@ -9,7 +9,6 @@
   // border-left: $border;
   // border-right: $border;
   display: block;
-
   .pageWrap {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
@@ -45,7 +44,7 @@
           transition: all 0.5s;
         }
         &:hover ~ .pageDetail img {
-          opacity: 1;
+          opacity: 0.6;
           transition: all 0.5s;
         }
       }

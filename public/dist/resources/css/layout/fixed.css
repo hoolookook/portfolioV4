@@ -94,21 +94,53 @@
     }
 }
 
-#header .navBar {
-    width: 100%;
-    position: fixed;
-    border-top: 3px dashed #caa623;
-    background-color: #1c1b18;
+#fixedWrap {
     z-index: 6;
 }
 
-#header .navBar .navUl {
-    text-align: center;
-    display: none;
-    border-bottom: 3px dashed #caa623;
+#fixedWrap #upicon {
+    background: url(/public/src/resources/images/screenShot/upArrow.png) no-repeat center center;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: none;
+    cursor: pointer;
 }
 
-#header .navBar .navUl li {
-    display: inline-block;
-    padding: 25px;
+#fixedWrap .fixed {
+    position: fixed;
+}
+
+#fixedWrap .Top {
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 3px dashed #caa623;
+}
+
+#fixedWrap .Bottom {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 3px dashed #caa623;
+}
+
+#fixedWrap .Left {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    top: 0;
+    left: 0;
+    border-left: 3px dashed #caa623;
+}
+
+#fixedWrap .Right {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    top: 0;
+    right: 0;
+    border-right: 3px dashed #caa623;
 }

@@ -48,46 +48,36 @@ $(function () {
   $(window).scroll(function () {
     var scrollNum = $(window).scrollTop();
     var circleNum = scrollNum >= footerHeight ? true : false;
-
+    var $navbar = $(".navBar"),
+      $navUI = $(".navBar .navUl");
     console.log("현재 스크롤 값은 " + $(window).scrollTop());
 
-    function up() {
-      $(".navBar").fadeOut();
-      $(".navBar .navUl").fadeOut();
+    function up(sel1, sel2) {
+      sel1.stop().hide();
+      sel2.stop().hide();
     }
-    function down() {
-      $(".navBar")
-        .css({
-          "border-bottom": "3px dashed #caa623",
-        })
-        .fadeIn();
-      $(".navBar .navUl")
-        .css({
-          display: "block",
-        })
-        .fadeIn();
+    function down(sel1, sel2) {
+      sel1.stop().show();
+      sel2.stop().show();
     }
-    if (scrollNum >= 100) {
-      down();
+    if (scrollNum > 100) {
+      down($navbar, $navUI);
     } else {
-      up();
+      up($navbar, $navUI);
     }
     if (circleNum) {
       if (circleBull) circleChart();
     } else {
       circleBull = true;
     }
-
-    // refresh scroll top
-    // if (history.scrollRestoration) {
-    //   history.scrollRestoration = "manual";
-    // } else {
-    //   window.onbeforeunload = function () {
-    //     window.scrollTo(0, 0);
-    //   };
-    // }
   });
-
+  function clickIcon() {
+    $("#upicon").click(function () {
+      // 클릭 중복 방지
+      $("html, body").filter(":not(:animated)").animate({ scrollTop: 0 }, 400);
+      return false;
+    });
+  }
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 300) {
@@ -96,10 +86,7 @@ $(function () {
         $("#upicon").fadeOut();
       }
     });
-    $("#upicon").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 400);
-      return false;
-    });
+    clickIcon();
   });
   // circle chart
   function circleChart() {

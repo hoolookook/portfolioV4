@@ -97,8 +97,6 @@
 #footer {
     border-top: none;
     text-align: center;
-    border: 3px dashed #caa623;
-    border-top: none;
 }
 
 #footer .profileWrap {
@@ -243,6 +241,9 @@
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
 }
 
 #footer .profileWrap .profileR .skills .sphereChartWrap .sphere {
