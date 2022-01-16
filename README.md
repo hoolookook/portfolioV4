@@ -30,7 +30,7 @@
   <img src="/git_photo/scss_func_mediaEx.PNG" title="scss function media example" alt="scss function media example">
   <p>겹치는 코드를 활용하기 쉽게만듬</p> 
   <li><h4>media query</h4></li>   
-  -web    
+  <li>-web</li> 
   <img src="/git_photo/v_web.PNG" width="40%" title="web version" alt="web version">
   -mobile    
   <img src="/git_photo/v_mobile.PNG" title="mobile version" alt="mobile version">
