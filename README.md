@@ -15,10 +15,6 @@
   <li>jQuery</li>
 </ul>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3d9800f5908b9072e3800373f60f97c34076fd52
 <h3>Advenced Feature</h3>
 <ul>
   <li><h4>gulp 사용</h4></li>   
