@@ -20,7 +20,7 @@
 
 <h3>Advenced Feature</h3>
 <ul>
-  *gulp 사용
+  +gulp 사용
   <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">    문서관리 용이
   *gulp 사용
   <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">    문서관리 용이
