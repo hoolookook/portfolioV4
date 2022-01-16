@@ -1,13 +1,13 @@
 <h1>hoolookook portfolio</h1>
 
-<h3>컨셉</h3>
+<h3>CONCEPT</h3>
 
 <p>게임 포탈의 엔딩을 따라 만들었음.</p>
 <img src="/git_photo/portalEnd.jpg" width="40%" height="30%" title="portalEnding" alt="portalEnding"></img>
 
 <a href="https://images.app.goo.gl/oJmhRCauUnYxQKJq9">출처</a>
 
-<h3>사용기술</h3>
+<h3>SKILLS</h3>
 <ul>
   <li>HTML</li>
   <li>SCSS</li>
@@ -36,3 +36,7 @@
   <img src="/git_photo/js_scrollEvent_exception_handling.PNG" title="javascript scroll event" alt="javascript scroll event">
   <p>bool값을 지정 true false상태일때 애니메이션 실행, 애니메이션 중복처리로 겹쳐져서 실행되지않게 한다.</p>  
 </ul>
+<h3>WEAKNESS</h3>
+  <li>js활용 부족</li>   
+  <li>clone 부족</li>   
+ 
