@@ -34,4 +34,8 @@
   <img src="/git_photo/v_mobile.PNG" title="mobile version" alt="mobile version">
   <img src="/git_photo/fold_web.PNG" title="mobile fold version" alt="mobile fold version">
   <p>모든 사이즈에 미디어쿼리 적용</p> 
+  <li><h4>js scroll event</h4></li>   
+  <img src="/git_photo/js_scrollEvent.PNG" title="javascript scroll event" alt="javascript scroll event">
+  <img src="/git_photo/js_scrollEvent_exception_handling.PNG" title="javascript scroll event" alt="javascript scroll event">
+  <p>bool값을 지정 true false상태일때 애니메이션 실행, 애니메이션 중복처리로 겹쳐져서 실행되지않게 한다.</p>  
 </ul>
