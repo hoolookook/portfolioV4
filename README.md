@@ -37,5 +37,7 @@
   <p>bool값을 지정 true false상태일때 애니메이션 실행, 애니메이션 중복처리로 겹쳐져서 실행되지않게 한다.</p>  
 </ul>
 <h3>WEAKNESS</h3>
+<ul>
   <li>js활용 부족</li>   
   <li>clone 부족</li>
+</ul>
