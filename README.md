@@ -22,10 +22,14 @@
 <ul>
   <li><h4>gulp 사용</h4></li>   
   <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">
-  <p>문서관리 용이</p>   
-  <li>gulp 사용</li>
-  <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">    문서관리 용이
-  <li>gulp 사용</li>
-  <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">    문서관리 용이
-  
+  <p>문서관리 용이, build, dist</p>   
+  <li><h4>scss 사용</h4></li>   
+  <img src="/git_photo/scss_func.PNG" title="scss function" alt="scss function">
+  <img src="/git_photo/scss_func_ex.PNG" title="scss function example" alt="scss function example">
+  <img src="/git_photo/scss_func_ex2.PNG" title="scss function example2" alt="scss function example2">
+  <img src="/git_photo/scss_func_mediaEx.PNG" title="scss function media example" alt="scss function media example">
+  <p>겹치는 코드를 활용하기 쉽게만듬</p> 
+  <li><h4>gulp 사용</h4></li>   
+  <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">
+  <p>문서관리 용이</p> 
 </ul>
