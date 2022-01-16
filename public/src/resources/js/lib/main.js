@@ -53,7 +53,6 @@ $(function () {
   $(window).scroll(function () {
     var scrollNum = $(window).scrollTop();
     var footerNum = scrollNum >= footerHeight ? true : false;
-    var rotateArrow = scrollNum > 100 ? true : false;
     var $navbar = $(".navBar"),
       $navUI = $(".navBar .navUl");
 
@@ -74,54 +73,27 @@ $(function () {
     }
     if (footerNum) {
       if (circleBull) circleChart();
-      // $("#header .navUl li:last-child").css({
-      //   "font-style": "italic",
-      // });
     } else {
-      // $("#header .navUl li").css({
-      //   "font-style": "normal",
-      // });
       circleBull = true;
     }
-    $(function () {
-      $(window).scroll(function () {
-        // true면 아래로 내려감
-        if (rotateArrow) {
-          $("#upicon").css({
-            transform: "rotateX(0)",
-          });
-          clickDwIcon();
-          rotateArrow = false;
-        } else {
-          $("#upicon").css({
-            transform: "rotateX(180deg)",
-          });
-          clickUpIcon();
-          rotateArrow = true;
-        }
-      });
-    });
-    function clickUpIcon() {
-      $("#upicon").click(function () {
-        // 클릭 중복 방지
-        $("html, body")
-          .filter(":not(:animated)")
-          .animate({ scrollTop: 0 }, 400);
-        return false;
-      });
-    }
-
-    function clickDwIcon() {
-      $("#upicon").click(function () {
-        // 클릭 중복 방지
-        $("html, body")
-          .filter(":not(:animated)")
-          .animate({ scrollTop: $(document).height() }, 400);
-        return false;
-      });
-    }
   });
+  function clickUpIcon() {
+    $("#upicon").click(function () {
+      $("html, body").filter(":not(:animated)").animate({ scrollTop: 0 }, 400);
+      return false;
+    });
+  }
 
+  function clickDwIcon() {
+    $("#downicon").click(function () {
+      $("html, body")
+        .filter(":not(:animated)")
+        .animate({ scrollTop: $(document).height() }, 400);
+      return false;
+    });
+  }
+  clickDwIcon();
+  clickUpIcon();
   //-------------------------------------------------------------------------------------------------
 
   // circle chart

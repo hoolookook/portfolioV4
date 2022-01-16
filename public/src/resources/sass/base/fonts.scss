@@ -9,3 +9,10 @@ strong {
   text-transform: uppercase;
   @include commonFont(24px, $fontC);
 }
+
+.openPdf {
+  font-family: "Do Hyeon", sans-serif;
+  text-transform: uppercase;
+  @include commonFont(16px, $fontC);
+  font-weight: bold;
+}

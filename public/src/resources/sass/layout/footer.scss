@@ -2,10 +2,6 @@
 #footer {
   border-top: none;
   text-align: center;
-  // border: $border;
-  // border-top: none;
-  // background-color: $black1;
-  // background-color: red;
   .profileWrap {
     width: 100%;
     height: 100%;
@@ -29,16 +25,18 @@
           &:last-child {
             a {
               vertical-align: text-bottom;
+              font-size: 24px;
             }
           }
         }
       }
     }
     .profileR {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: center;
+      // display: flex;
+      // flex-flow: row wrap;
+      // align-items: center;
+      // justify-content: center;
+      @include commonFlex(row wrap, center, center);
       .skills {
         p {
           padding-bottom: 20px;

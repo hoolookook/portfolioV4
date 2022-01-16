@@ -1,15 +1,10 @@
 // click & scroll event
-// console.log("footer 스크롤 값은 " + $("#footer").offsetTop);
-const target = document.getElementById("footer"); // 요소의 id 값이 target이라 가정
-const clientRect = target.getBoundingClientRect(); // DomRect 구하기 (각종 좌표값이 들어있는 객체)
-const relativeTop = clientRect.top; // Viewport의 시작지점을 기준으로한 상대좌표 Y 값.
-const scrolledTopLength = window.pageYOffset; // 스크롤된 길이
-//const scrolledTopLength = pageYOffset; // window 객체 없이 pageYOffset 메서드를 써도 가능하다.
-const absoluteTop = scrolledTopLength + relativeTop; // 절대좌표
-// const footerHeight = target.offsetHeight * 1.5;
+
 var body = document.body,
   html = document.documentElement,
-  footer = document.getElementById("footer");
+  intro = document.getElementById("intro"),
+  footer = document.getElementById("footer"),
+  contents = document.getElementById("contents");
 
 var height = Math.max(
   body.scrollHeight,
@@ -18,10 +13,18 @@ var height = Math.max(
   html.scrollHeight,
   html.offsetHeight
 );
-var footerH = Math.max(footer.scrollHeight, footer.offsetHeight);
 
-var footerHeight = height - (footerH + footerH / 2);
-console.log(footerHeight);
+var introH = Math.max(intro.scrollHeight, intro.offsetHeight),
+  footerH = Math.max(footer.scrollHeight, footer.offsetHeight),
+  contentsH = Math.max(contents.scrollHeight, contents.offsetHeight);
+var introHeight = height - (introH + introH / 1.5),
+  footerHeight = height - (footerH + footerH / 1.5),
+  contentsHeight = height - (contentsH + contentsH / 1.5);
+
+// console.log(footerHeight);
+// console.log(contentsHeight);
+console.log(height);
+//-------------------------------------------------------------------------------------------------
 
 $(function () {
   // 변수
@@ -44,12 +47,15 @@ $(function () {
     scrolling(direction); // direction 을 인자로 함수 실행
     return false; // 본래 이벤트 방지
   });
+  //-------------------------------------------------------------------------------------------------
+
   // scroll event
   $(window).scroll(function () {
     var scrollNum = $(window).scrollTop();
-    var circleNum = scrollNum >= footerHeight ? true : false;
+    var footerNum = scrollNum >= footerHeight ? true : false;
     var $navbar = $(".navBar"),
       $navUI = $(".navBar .navUl");
+
     console.log("현재 스크롤 값은 " + $(window).scrollTop());
 
     function up(sel1, sel2) {
@@ -65,29 +71,31 @@ $(function () {
     } else {
       up($navbar, $navUI);
     }
-    if (circleNum) {
+    if (footerNum) {
       if (circleBull) circleChart();
     } else {
       circleBull = true;
     }
   });
-  function clickIcon() {
+  function clickUpIcon() {
     $("#upicon").click(function () {
-      // 클릭 중복 방지
       $("html, body").filter(":not(:animated)").animate({ scrollTop: 0 }, 400);
       return false;
     });
   }
-  $(function () {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 300) {
-        $("#upicon").fadeIn();
-      } else {
-        $("#upicon").fadeOut();
-      }
+
+  function clickDwIcon() {
+    $("#downicon").click(function () {
+      $("html, body")
+        .filter(":not(:animated)")
+        .animate({ scrollTop: $(document).height() }, 400);
+      return false;
     });
-    clickIcon();
-  });
+  }
+  clickDwIcon();
+  clickUpIcon();
+  //-------------------------------------------------------------------------------------------------
+
   // circle chart
   function circleChart() {
     $(window).ready(function () {
@@ -133,7 +141,7 @@ $(function () {
       draw(60, ".ps", "#0b593d");
     }
   }
-
+  //-------------------------------------------------------------------------------------------------
   // typing text 여러가지 문장
   $(function () {
     var typingText = document.querySelector(".typeText");

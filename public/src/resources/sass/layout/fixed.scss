@@ -1,17 +1,24 @@
 @import "../base/common.scss";
 #fixedWrap {
   z-index: 6;
-  #upicon {
+  .iconBtn {
     background: url(/public/src/resources/images/screenShot/upArrow.png)
       no-repeat center center;
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
     position: fixed;
-    right: 15px;
-    bottom: 15px;
     border: none;
     cursor: pointer;
+  }
+  #upicon {
+    right: 15px;
+    transform: rotateX(0deg);
+    bottom: 55px;
+  }
+  #downicon {
+    right: 15px;
+    bottom: 20px;
     transform: rotateX(180deg);
   }
   .fixed {
@@ -31,7 +38,6 @@
   }
   .Left {
     height: 100vh;
-    // width: 5px;
     min-height: -webkit-fill-available;
     top: 0;
     left: 0;

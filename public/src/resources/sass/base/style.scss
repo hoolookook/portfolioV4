@@ -10,19 +10,10 @@
 
 html {
   background-color: $black1;
-  // &::after {
-  //   content: "";
-  //   position: fixed;
-  //   bottom: 0;
-  //   right: 0;
-  //   height: 100vh;
-  //   border-left: $border;
-  // }
 }
 body {
   min-width: $minWidth;
   display: grid;
-  // border-top: $border;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   #section,
@@ -57,27 +48,8 @@ body {
   }
   &::-webkit-scrollbar-track-piece:start {
     background: transparent;
-    // margin-top: 80px;
   }
   &::-webkit-scrollbar-track-piece:end {
     background: transparent;
-    // margin-bottom: 0px;
   }
-  // &::after {
-  //   content: "";
-  //   position: fixed;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   width: 100%;
-  //   border-top: $border;
-  // }
-  // &::before {
-  //   content: "";
-  //   position: fixed;
-  //   bottom: 0;
-  //   left: 0;
-  //   height: 100vh;
-  //   border-left: $border;
-  // }
 }

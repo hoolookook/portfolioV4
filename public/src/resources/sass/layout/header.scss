@@ -1,11 +1,9 @@
 @import "../base/common.scss";
 #header {
   .navBar {
-    // display: none;
     width: 100%;
     position: fixed;
     border-top: 3px dashed $fontC;
-    // border-top: none;
     background-color: $black1;
     z-index: 6;
     .navUl {
