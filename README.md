@@ -1,5 +1,5 @@
 <h1>hoolookook portfolio</h1>
-<strong>http://hoolookook.dothome.co.kr/</strong>
+<strong title="내 포트폴리오로">http://hoolookook.dothome.co.kr/</strong>
 <h3>CONCEPT</h3>
 
 <p>게임 포탈의 엔딩을 따라 만들었음.</p>
