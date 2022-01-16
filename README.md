@@ -29,7 +29,7 @@
   <li><h4>media query</h4></li>
   <img src="/git_photo/fold_web.PNG" title="mobile fold version" alt="mobile fold version">
   <img src="/git_photo/v_mobile.PNG" title="mobile version" alt="mobile version">
-  <img src="/git_photo/v_web.PNG" width="40%" title="web version" alt="web version"> 
+  <img src="/git_photo/v_web.PNG"  title="web version" alt="web version"> 
   <p>모든 사이즈에 미디어쿼리 적용</p> 
   <li><h4>js scroll event</h4></li>   
   <img src="/git_photo/js_scrollEvent.PNG" title="javascript scroll event" alt="javascript scroll event">
