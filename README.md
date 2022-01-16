@@ -22,6 +22,7 @@
 <ul>
   <li>gulp 사용</li>
   <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">
+  - 문서관리 용이
   <li>gulp 사용</li>
   <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">
   <li>gulp 사용</li>
