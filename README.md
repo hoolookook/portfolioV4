@@ -5,7 +5,7 @@ http://hoolookook.dothome.co.kr/
 <p>게임 포탈의 엔딩을 따라 만들었음.</p>
 <img src="/portalEnd.jpg" width="40%" height="30%" title="portalEnding" alt="portalEnding"></img>
 
-출처: <a href="https://images.app.goo.gl/oJmhRCauUnYxQKJq9" target="_blank">출처로</a>
+<a href="https://images.app.goo.gl/oJmhRCauUnYxQKJq9">출처</a>
 
 
 <h3>사용기술</h3>
