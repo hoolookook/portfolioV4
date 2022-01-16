@@ -30,9 +30,9 @@
   <img src="/git_photo/scss_func_mediaEx.PNG" title="scss function media example" alt="scss function media example">
   <p>겹치는 코드를 활용하기 쉽게만듬</p> 
   <li><h4>media query</h4></li>   
-  -web
+  -web    
   <img src="/git_photo/v_web.PNG" width="40%" title="web version" alt="web version">
-  -mobile
+  -mobile    
   <img src="/git_photo/v_mobile.PNG" title="mobile version" alt="mobile version">
   <img src="/git_photo/fold_web.PNG" title="mobile fold version" alt="mobile fold version">-galaxyFold
   <p>모든 사이즈에 미디어쿼리 적용</p> 
