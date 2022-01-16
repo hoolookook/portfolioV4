@@ -1,4 +1,5 @@
 <h1>hoolookook portfolio</h1>
+http://hoolookook.dothome.co.kr/
 <h3>컨셉</h3>
 
 <p>게임 포탈의 엔딩을 따라 만들었음.</p>
@@ -6,7 +7,6 @@
 
 출처: <a>https://images.app.goo.gl/oJmhRCauUnYxQKJq9</a>
 
-http://hoolookook.dothome.co.kr/
 
 <h3>사용기술</h3>
 <ul>
