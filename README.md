@@ -16,7 +16,7 @@
 </ul>
 
 <h3>Advenced Feature</h3>
-<ul>
+<ul float="left">
   <li><h4>gulp 사용</h4></li>   
   <img src="/git_photo/gulp_index.PNG" title="gulp index" alt="gulp index">
   <p>문서관리 용이, build, dist</p>   
