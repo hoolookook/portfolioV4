@@ -43,13 +43,13 @@
 			</ul>
 		</div>
 	</section>
-	<section id="intro">
+	<section id="intro" class="scroll">
 		<div class="introWrap">
 			<h2 tabindex="0">저는...</h2>
 			<p class="typeText" tabindex="0"></p>
 		</div>
 	</section>
-	<section id="contents">
+	<section id="contents" class="scroll">
 		<h2 class="ir_so">Work</h2>
 		<ul class="pageWrap">
 			<li class="page Lotte">
@@ -59,6 +59,9 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/lotteCinemaScreenShotFit.png" alt="lotteCinemaPageScreenShot">
 					<div class="buttonWrap">
+						<div class="detailCard">
+							<em>퍼블리싱 100%</em>
+						</div>
 						<button class="openPdf" onclick=" window.open('/public/src/resources/images/screenShot/pdf_SC/lotteCinema.pdf','_blank')">PDF</button>
 						<button class="openPdf" onclick=" window.open('http://127.0.0.1:5503/public/build/index.html','_blank')">CLONE</button>
 					</div>
@@ -71,6 +74,9 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/naverScreenShotFit.png" alt="naverPageScreenShot">
 					<div class="buttonWrap">
+						<div class="detailCard">
+							<em>퍼블리싱 100%</em>
+						</div>
 						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/pdf_SC/naverPort.pdf','_blank')">PDF</button>
 						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">CLONE</button>
 					</div>
@@ -83,6 +89,9 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/coupangScreenShotFit.png" alt="coupangPageScreenShot">
 					<div class="buttonWrap">
+						<div class="detailCard">
+							<em>퍼블리싱 100%</em>
+						</div>
 						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/pdf_SC/coupang.pdf','_blank')">PDF</button>
 						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">CLONE</button>
 					</div>
@@ -95,6 +104,9 @@
 				<div class="pageDetail">
 					<img src="/public/src/resources/images/screenShot/neungyuleScreenShotFit.png" alt="neungyulePageScreenShot">
 					<div class="buttonWrap">
+						<div class="detailCard">
+							<em>퍼블리싱 100%</em>
+						</div>
 						<button class="openPdf" onclick="window.open('/public/src/resources/images/screenShot/pdf_SC/Neungyule.pdf','_blank')">PDF</button>
 						<button class="openPdf" onclick="window.open('http://127.0.0.1:0053/public/build/index.html','_blank')">CLONE</button>
 					</div>
@@ -103,7 +115,7 @@
 		</ul>
 	</section>
 
-	<section id="footer">
+	<section id="footer" class="scroll">
 		<h2 class="ir_so">Contact</h2>
 		<div class="profileWrap">
 			<div class="profileL">
@@ -176,7 +188,8 @@
 		</div>
 	</section>
 	<div id="fixedWrap">
-		<button type="button" id="upicon"></button>
+		<button type="button" id="upicon" class="iconBtn"></button>
+		<button type="button" id="downicon" class="iconBtn"></button>
 		<div class="fixed Top"></div>
 		<div class="fixed Bottom"></div>
 		<div class="fixed Left"></div>

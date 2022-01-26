@@ -104,3 +104,11 @@ strong {
     font-size: 24px;
     color: #caa623;
 }
+
+.openPdf {
+    font-family: "Do Hyeon", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #caa623;
+    font-weight: bold;
+}

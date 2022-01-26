@@ -324,6 +324,14 @@ strong {
     color: #caa623;
 }
 
+.openPdf {
+    font-family: "Do Hyeon", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #caa623;
+    font-weight: bold;
+}
+
 @keyframes opLv {
 
     0%,
@@ -373,6 +381,11 @@ strong {
 #header .navBar .navUl li {
     display: inline-block;
     padding: 25px;
+}
+
+#header .navBar .navUl li .on a {
+    background-color: #fff;
+    color: black;
 }
 
 @keyframes opLv {
@@ -531,6 +544,23 @@ strong {
     text-align: center;
 }
 
+#contents .pageWrap .page:hover .title {
+    opacity: 0;
+    left: 20%;
+}
+
+#contents .pageWrap .page:hover img {
+    opacity: 0.6;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#contents .pageWrap .page:hover .pageDetail .buttonWrap {
+    opacity: 0.7;
+    background-color: black;
+}
+
 #contents .pageWrap .page .title {
     position: absolute;
     top: 50%;
@@ -545,7 +575,7 @@ strong {
 }
 
 #contents .pageWrap .page .title h3 {
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
 }
 
@@ -555,20 +585,6 @@ strong {
 
 #contents .pageWrap .page .title h3:hover {
     cursor: default;
-}
-
-#contents .pageWrap .page .title:hover {
-    opacity: 0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-#contents .pageWrap .page .title:hover~.pageDetail img {
-    opacity: 1;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
 }
 
 #contents .pageWrap .page .pageDetail {
@@ -589,6 +605,7 @@ strong {
 }
 
 #contents .pageWrap .page .pageDetail .buttonWrap {
+    border-top: 3px dashed #caa623;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
@@ -596,6 +613,21 @@ strong {
     width: 100%;
     bottom: 0;
     left: 0;
+    opacity: 0;
+}
+
+#contents .pageWrap .page .pageDetail .buttonWrap .detailCard {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    bottom: 40px;
+    left: 0;
+    line-height: 100px;
+    text-align: center;
+}
+
+#contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+    font-size: 16px;
 }
 
 #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
@@ -605,12 +637,7 @@ strong {
     float: left;
     width: 50%;
     height: 40px;
-    background-color: #1c1b18;
-    font-size: 16px;
-    font-family: "Do Hyeon", sans-serif;
-    color: #caa623;
-    text-transform: uppercase;
-    font-weight: bold;
+    background-color: transparent;
     border: none;
     text-align: center;
     -webkit-box-shadow: 0px 7px 6px -1px rgba(0, 0, 0, 0.81);
@@ -632,7 +659,7 @@ strong {
 
 #contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover {
     background-color: #caa623;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -755,6 +782,7 @@ strong {
 
 #footer .profileWrap .profileL .profileContact p:last-child a {
     vertical-align: text-bottom;
+    font-size: 24px;
 }
 
 #footer .profileWrap .profileR {
@@ -770,16 +798,16 @@ strong {
     -moz-box-direction: normal;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #footer .profileWrap .profileR .skills p {
@@ -902,17 +930,31 @@ strong {
     z-index: 6;
 }
 
-#fixedWrap #upicon {
+#fixedWrap .iconBtn {
     background: url(/public/src/resources/images/screenShot/upArrow.png) no-repeat center center;
-    -moz-background-size: 50px 50px;
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    -moz-background-size: 30px 30px;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
     position: fixed;
-    right: 15px;
-    bottom: 15px;
     border: none;
     cursor: pointer;
+}
+
+#fixedWrap #upicon {
+    right: 15px;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    bottom: 55px;
+}
+
+#fixedWrap #downicon {
+    right: 15px;
+    bottom: 20px;
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
 
 #fixedWrap .fixed {
@@ -1029,7 +1071,7 @@ strong {
     }
 }
 
-@media screen and (min-width: 990px) and (max-width: 1542px) {
+@media screen and (min-width: 990px) and (max-width: 1551px) {
     #contents .pageWrap {
         grid-template-columns: repeat(2, 400px);
         grid-template-rows: repeat(2, 400px);

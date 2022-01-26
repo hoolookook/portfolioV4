@@ -142,7 +142,7 @@
     }
 }
 
-@media screen and (min-width: 990px) and (max-width: 1542px) {
+@media screen and (min-width: 990px) and (max-width: 1551px) {
     #contents .pageWrap {
         grid-template-columns: repeat(2, 400px);
         grid-template-rows: repeat(2, 400px);

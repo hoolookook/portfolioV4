@@ -98,17 +98,31 @@
     z-index: 6;
 }
 
-#fixedWrap #upicon {
+#fixedWrap .iconBtn {
     background: url(/public/src/resources/images/screenShot/upArrow.png) no-repeat center center;
-    -moz-background-size: 50px 50px;
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    -moz-background-size: 30px 30px;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
     position: fixed;
-    right: 15px;
-    bottom: 15px;
     border: none;
     cursor: pointer;
+}
+
+#fixedWrap #upicon {
+    right: 15px;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    bottom: 55px;
+}
+
+#fixedWrap #downicon {
+    right: 15px;
+    bottom: 20px;
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
 
 #fixedWrap .fixed {

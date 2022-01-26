@@ -15,346 +15,358 @@ $centerWHL: 65px;
 $profilePicW: 176px;
 $profilePicH: 236px;
 
+// @media screen and (max-width: 1019px) {
+//   #contents {
+//     .pageWrap {
+//       background-color: red;
+//       display: grid;
+//       grid-template-columns: repeat(auto-fit, minmax(100px px, 1fr));
+//       max-width: 500px;
+//       .page {
+//       }
+//     }
+//   }
+// }
 // header-----------------------------------------
-@media screen and (max-width: $media_4) {
-  #header {
-    .navBar {
-      ul {
-        li {
-          padding: 15px;
-          a {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: $media_4) {
-  #header {
-    .navBar {
-      ul {
-        li {
-          padding: 12px;
-          a {
-            font-size: 15px;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: $media_2) {
-  #header {
-    .navBar {
-      ul {
-        li {
-          padding: 9px;
-          a {
-            font-size: 12px;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: $media_1) {
-  #header {
-    .navBar {
-      ul {
-        li {
-          padding: 5px;
-          a {
-            font-size: 7px;
-          }
-        }
-      }
-    }
-  }
-}
-// -----------------------------------------------
+// @media screen and (max-width: $media_4) {
+//   #header {
+//     .navBar {
+//       ul {
+//         li {
+//           padding: 15px;
+//           a {
+//             font-size: 20px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: $media_4) {
+//   #header {
+//     .navBar {
+//       ul {
+//         li {
+//           padding: 12px;
+//           a {
+//             font-size: 15px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: $media_2) {
+//   #header {
+//     .navBar {
+//       ul {
+//         li {
+//           padding: 9px;
+//           a {
+//             font-size: 12px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: $media_1) {
+//   #header {
+//     .navBar {
+//       ul {
+//         li {
+//           padding: 5px;
+//           a {
+//             font-size: 7px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// // -----------------------------------------------
 
-// intro------------------------------------------
-@media screen and (max-width: $media_4) {
-  #intro {
-    .introWrap {
-      h2,
-      .typeText {
-        font-size: 15px;
-      }
-    }
-  }
-}
-// -----------------------------------------------
+// // intro------------------------------------------
+// @media screen and (max-width: $media_4) {
+//   #intro {
+//     .introWrap {
+//       h2,
+//       .typeText {
+//         font-size: 15px;
+//       }
+//     }
+//   }
+// }
+// // -----------------------------------------------
 
-// contents---------------------------------------
-@media screen and (min-width: $media_8) and (max-width: $media_9) {
-  #contents {
-    .pageWrap {
-      grid-template-columns: repeat(2, 400px);
-      grid-template-rows: repeat(2, 400px);
-    }
-  }
-}
+// // contents---------------------------------------
+// @media screen and (min-width: $media_8) and (max-width: $media_9) {
+//   #contents {
+//     .pageWrap {
+//       grid-template-columns: repeat(2, 400px);
+//       grid-template-rows: repeat(2, 400px);
+//     }
+//   }
+// }
 
-@media screen and (max-width: $media_6) {
-  #contents {
-    padding: 100px 30px;
-    .pageWrap {
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(200px, 4fr));
-      .page {
-        .title {
-          a {
-            font-size: 29px;
-          }
-        }
-        .pageDetail {
-          height: 100%;
-          overflow: hidden;
-          img {
-            height: max-content !important;
-          }
-          .buttonWrap {
-            .openPdf {
-              font-size: 13px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: $media_5) {
-  #contents {
-    .pageWrap {
-      .page {
-        .title {
-          a {
-            font-size: 25px;
-          }
-        }
-        .pageDetail {
-          width: 80%;
-          margin: 0 auto;
-          transition: all 0.7s;
-          .buttonWrap {
-            .openPdf {
-              font-size: 10px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: $media_3_2) {
-  #contents {
-    .pageWrap {
-      .page {
-        .title {
-          a {
-            font-size: 23px;
-          }
-        }
-        .pageDetail {
-          transition: all 0.7s;
-          width: 60%;
-          .buttonWrap {
-            .openPdf {
-              font-size: 8px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: $media_3) {
-  #contents {
-    .pageWrap {
-      .page {
-        .title {
-          a {
-            font-size: 19px;
-          }
-        }
-        .pageDetail {
-          transition: all 0.7s;
-          width: 50%;
-          .buttonWrap {
-            .openPdf {
-              font-size: 6px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// @media screen and (max-width: $media_6) {
+//   #contents {
+//     padding: 100px 30px;
+//     .pageWrap {
+//       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+//       grid-template-rows: repeat(auto-fit, minmax(200px, 4fr));
+//       .page {
+//         .title {
+//           a {
+//             font-size: 29px;
+//           }
+//         }
+//         .pageDetail {
+//           height: 100%;
+//           overflow: hidden;
+//           img {
+//             height: max-content !important;
+//           }
+//           .buttonWrap {
+//             .openPdf {
+//               font-size: 13px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: $media_5) {
+//   #contents {
+//     .pageWrap {
+//       .page {
+//         .title {
+//           a {
+//             font-size: 25px;
+//           }
+//         }
+//         .pageDetail {
+//           width: 80%;
+//           margin: 0 auto;
+//           transition: all 0.7s;
+//           .buttonWrap {
+//             .openPdf {
+//               font-size: 10px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: $media_3_2) {
+//   #contents {
+//     .pageWrap {
+//       .page {
+//         .title {
+//           a {
+//             font-size: 23px;
+//           }
+//         }
+//         .pageDetail {
+//           transition: all 0.7s;
+//           width: 60%;
+//           .buttonWrap {
+//             .openPdf {
+//               font-size: 8px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: $media_3) {
+//   #contents {
+//     .pageWrap {
+//       .page {
+//         .title {
+//           a {
+//             font-size: 19px;
+//           }
+//         }
+//         .pageDetail {
+//           transition: all 0.7s;
+//           width: 50%;
+//           .buttonWrap {
+//             .openPdf {
+//               font-size: 6px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-// -----------------------------------------------
+// // -----------------------------------------------
 
-// footer-----------------------------------------
-@media screen and (max-width: 1118px) {
-  #footer {
-    .profileWrap {
-      flex-flow: column wrap;
+// // footer-----------------------------------------
+// @media screen and (max-width: 1118px) {
+//   #footer {
+//     .profileWrap {
+//       flex-flow: column wrap;
 
-      .profileL {
-        padding: 100px;
-        .profilePhoto {
-          img {
-          }
-        }
-        .profileContact {
-        }
-      }
-      .profileR {
-        .skills {
-          .sphereChartWrap {
-            .sphere {
-              .skillTitle {
-              }
-              .center {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 676px) {
-  #footer {
-    .profileWrap {
-      flex-flow: column wrap;
-      align-items: stretch;
-      .profileL {
-        @include commonFlex(column wrap, center, center);
-        padding: 50px;
-        .profilePhoto {
-          img {
-          }
-        }
-        .profileContact {
-        }
-      }
-      .profileR {
-        .skills {
-          p {
-            span {
-              font-size: 14px;
-            }
-          }
-          .sphereChartWrap {
-            // @include commonFlex(column row, center, center);
+//       .profileL {
+//         padding: 100px;
+//         .profilePhoto {
+//           img {
+//           }
+//         }
+//         .profileContact {
+//         }
+//       }
+//       .profileR {
+//         .skills {
+//           .sphereChartWrap {
+//             .sphere {
+//               .skillTitle {
+//               }
+//               .center {
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 676px) {
+//   #footer {
+//     .profileWrap {
+//       flex-flow: column wrap;
+//       align-items: stretch;
+//       .profileL {
+//         @include commonFlex(column wrap, center, center);
+//         padding: 50px;
+//         .profilePhoto {
+//           img {
+//           }
+//         }
+//         .profileContact {
+//         }
+//       }
+//       .profileR {
+//         .skills {
+//           p {
+//             span {
+//               font-size: 14px;
+//             }
+//           }
+//           .sphereChartWrap {
+//             // @include commonFlex(column row, center, center);
 
-            .sphere {
-              @include WH(calc($sphereWH/1.7), calc($sphereWH/1.7));
+//             .sphere {
+//               @include WH(calc($sphereWH/1.7), calc($sphereWH/1.7));
 
-              .skillTitle {
-                strong {
-                  font-size: 2px;
-                }
-              }
-              .center {
-                @include WH(calc($centerWHL/1.7), calc($centerWHL/1.7));
-                line-height: calc($centerWHL/1.7);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//               .skillTitle {
+//                 strong {
+//                   font-size: 2px;
+//                 }
+//               }
+//               .center {
+//                 @include WH(calc($centerWHL/1.7), calc($centerWHL/1.7));
+//                 line-height: calc($centerWHL/1.7);
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-@media screen and (max-width: 405px) {
-  @include footRatio(1.2, 1, 1.8, 4px, 12px);
-  #footer {
-    .profileWrap {
-      .profileL {
-        padding: 0;
-      }
-      .profileR {
-        .skills {
-          .sphereChartWrap {
-            @include commonFlex(row wrap, space-around, center);
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-height: 638px) {
-  #footer {
-    .profileWrap {
-      .profileL {
-        padding: 0;
-      }
-    }
-  }
-}
-@media screen and (max-height: 532px) {
-  @include footRatio(1.5, 0.5, 1.4, 2px, 6px);
-}
-@media screen and (max-height: 514px) and (max-width: 481px) {
-  @include footRatio(2, 1.4, 1.8, 1px, 4px);
-}
-@media screen and (max-height: 442px) and (max-width: 339px) {
-  @include footRatio(3, 2, 3, 1px, 2px);
+// @media screen and (max-width: 405px) {
+//   @include footRatio(1.2, 1, 1.8, 4px, 12px);
+//   #footer {
+//     .profileWrap {
+//       .profileL {
+//         padding: 0;
+//       }
+//       .profileR {
+//         .skills {
+//           .sphereChartWrap {
+//             @include commonFlex(row wrap, space-around, center);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-height: 638px) {
+//   #footer {
+//     .profileWrap {
+//       .profileL {
+//         padding: 0;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-height: 532px) {
+//   @include footRatio(1.5, 0.5, 1.4, 2px, 6px);
+// }
+// @media screen and (max-height: 514px) and (max-width: 481px) {
+//   @include footRatio(2, 1.4, 1.8, 1px, 4px);
+// }
+// @media screen and (max-height: 442px) and (max-width: 339px) {
+//   @include footRatio(3, 2, 3, 1px, 2px);
 
-  #footer {
-    .profileWrap {
-      .profileL {
-        padding: 0;
-        .profileContact {
-          padding: 5px 0px;
-        }
-      }
-      .profileR {
-        .skills {
-          .sphereChartWrap {
-            // @include commonFlex(column wrap, space-around, center);
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-height: 445px) and (max-width: 209px) {
-  #footer {
-    .profileWrap {
-      .profileL {
-        padding: 0;
-        .profileContact {
-          padding: 15px 10px;
-        }
-      }
-      .profileR {
-        .skills {
-          .sphereChartWrap {
-            @include commonFlex(column wrap, space-around, center);
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-height: 341px) and (max-width: 632px) {
-  #footer {
-    .profileWrap {
-      .profileR {
-        .skills {
-          .sphereChartWrap {
-            @include commonFlex(column wrap, flex-start, flex-start);
-          }
-        }
-      }
-    }
-  }
-}
+//   #footer {
+//     .profileWrap {
+//       .profileL {
+//         padding: 0;
+//         .profileContact {
+//           padding: 5px 0px;
+//         }
+//       }
+//       .profileR {
+//         .skills {
+//           .sphereChartWrap {
+//             // @include commonFlex(column wrap, space-around, center);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-height: 445px) and (max-width: 209px) {
+//   #footer {
+//     .profileWrap {
+//       .profileL {
+//         padding: 0;
+//         .profileContact {
+//           padding: 15px 10px;
+//         }
+//       }
+//       .profileR {
+//         .skills {
+//           .sphereChartWrap {
+//             @include commonFlex(column wrap, space-around, center);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-height: 341px) and (max-width: 632px) {
+//   #footer {
+//     .profileWrap {
+//       .profileR {
+//         .skills {
+//           .sphereChartWrap {
+//             @include commonFlex(column wrap, flex-start, flex-start);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 // -----------------------------------------------
 
