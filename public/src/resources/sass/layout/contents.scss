@@ -8,11 +8,7 @@
   display: block;
   .pageWrap {
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    // grid-template-columns: repeat(auto-fit, minmax(20%, auto));
-    // grid-auto-rows: minmax(150px, auto);
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    // grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
     grid-gap: 50px;
     max-width: 1000px;
@@ -21,8 +17,6 @@
     height: 100%;
     align-content: center;
     justify-content: center;
-    // align-content: space-around;
-    // justify-content: space-between;
     overflow: hidden;
     .page {
       position: relative;
@@ -52,6 +46,7 @@
         h3 {
           font-size: 30px;
           text-decoration: none;
+          transition: all 0.5s;
           &:visited {
             color: $fontC;
           }

@@ -192,3 +192,17 @@ $(function () {
     playAnim();
   });
 });
+
+$(function () {
+  var mql = window.matchMedia(
+    "screen and (min-width: 470px) and (max-width: 767px)"
+  );
+
+  mql.addListener(function (e) {
+    if (e.matches) {
+      console.log("모바일 화면 입니다.");
+    } else {
+      console.log("데스크탑 화면 입니다.");
+    }
+  });
+});
