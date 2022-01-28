@@ -105,8 +105,12 @@
 
 #contents .pageWrap {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-template-rows: repeat(3, 200px);
     grid-gap: 50px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
     height: 100%;
     -webkit-align-content: center;
     -ms-flex-line-pack: center;
@@ -157,6 +161,9 @@
 #contents .pageWrap .page .title h3 {
     font-size: 30px;
     text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 #contents .pageWrap .page .title h3:visited {
@@ -178,9 +185,7 @@
 }
 
 #contents .pageWrap .page .pageDetail img {
-    max-width: 100%;
     width: 100%;
-    height: 100%;
     opacity: 0.3;
 }
 

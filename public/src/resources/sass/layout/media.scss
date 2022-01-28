@@ -15,41 +15,158 @@ $centerWHL: 65px;
 $profilePicW: 176px;
 $profilePicH: 236px;
 @media screen and (max-width: 469px) {
+  #intro {
+    .introWrap {
+      font-size: 20px;
+      .typeText {
+        font-size: 14px;
+        &::after {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  #header {
+    .navBar {
+      .navUl {
+        li {
+          padding: 10px;
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
   #contents {
     height: 100% !important;
     .pageWrap {
-      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-      grid-template-rows: repeat(9, 100px);
-      gap: 10px;
-    }
-  }
-}
-@media screen and (min-width: 470px) and (max-width: 767px) {
-  #contents {
-    // background-color: red;
-    .title {
-      h3 {
-        width: 82px;
-        overflow: hidden;
-        font-size: 110px !important;
-      }
-    }
-    .pageDetail {
-      background-color: red;
-      img {
-        display: none;
-        opacity: 1 !important;
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+      grid-template-rows: repeat(9, 50px);
+      gap: 20px;
+      .page {
+        .title {
+          h3 {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
-}
-@media screen and (max-width: 1023px) {
-  /* 타블렛 */
+  #footer {
+    .profileWrap {
+      .profileL {
+        justify-content: center;
+        .profilePhoto {
+          img {
+            @include WH(146px, 196px);
+          }
+        }
+        .profileContact {
+          p {
+            font-size: 12px;
+            &:last-child a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 767px) {
-  /* 모바일 */
+// main.js에 이름바꾸기 있음
+@media screen and (min-width: 468px) and (max-width: 767px) {
+  #contents {
+    .pageWrap {
+      .page {
+        .title {
+          h3 {
+            width: 82px;
+            overflow: hidden;
+            font-size: 110px;
+          }
+        }
+        .pageDetail {
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
 }
+@media screen and (min-width: 500px) and(max-width:680px) {
+  #footer {
+    .profileWrap {
+      .profileR {
+        .skills {
+          p {
+            span {
+              font-size: 12px;
+            }
+          }
+          .sphereChartWrap {
+            .sphere {
+              @include WH(70px, 70px);
+              .skillTitle {
+                strong {
+                  font-size: 6px;
+                }
+              }
+              .center {
+                font-size: 12px;
+                @include WH(45px, 45px);
+                line-height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 100px) and(max-width:500px) {
+  #footer {
+    .profileWrap {
+      .profileR {
+        .skills {
+          p {
+            span {
+              font-size: 12px;
+            }
+          }
+          .sphereChartWrap {
+            width: 280px;
+            .sphere {
+              @include WH(70px, 70px);
+              .skillTitle {
+                strong {
+                  font-size: 6px;
+                }
+              }
+              .center {
+                font-size: 12px;
+                @include WH(45px, 45px);
+                line-height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @media screen and (max-width: 1023px) {
+//   /* 타블렛 */
+// }
+
+// @media screen and (max-width: 767px) {
+//   /* 모바일 */
+// }
 
 // @media screen and (max-width: 1019px) {
 //   #contents {
