@@ -235,3 +235,17 @@ $(function () {
     });
   }
 });
+// hover
+$(function () {
+  $(".openPdf")
+    .mouseover(function () {
+      $("#chanH3").css({
+        display: "none",
+      });
+    })
+    .mouseout(function () {
+      $("#chanH3").css({
+        display: "block",
+      });
+    });
+});

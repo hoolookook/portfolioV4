@@ -129,6 +129,26 @@ $profilePicH: 236px;
     }
   }
 }
+@media screen and (max-width: 560px) {
+  #contents {
+    .pageWrap {
+      .page {
+        .pageDetail {
+          .buttonWrap {
+            .openPdf {
+              font-size: 11px;
+            }
+            .detailCard {
+              em {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (min-width: 100px) and(max-width:500px) {
   #footer {
     .profileWrap {
