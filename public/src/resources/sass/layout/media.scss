@@ -45,6 +45,39 @@ $profilePicH: 236px;
       grid-template-rows: repeat(9, 50px);
       gap: 20px;
       .page {
+        .pageDetail {
+          .buttonWrap {
+            .firstBtn {
+              border-right: $border;
+            }
+            .lastBtn {
+              border-left: $border;
+            }
+            .openPdf {
+              height: 100%;
+              width: 15%;
+              text-indent: -9999px;
+              svg {
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 50%;
+                width: 15px;
+                height: 15px;
+                transform: translate(-50%, -50%);
+              }
+              &:hover svg {
+                fill: var(--black2);
+              }
+            }
+            .detailCard {
+              transform: translate(-50%, -70%);
+              em {
+                display: inline-block;
+              }
+            }
+          }
+        }
         .title {
           h3 {
             font-size: 20px;

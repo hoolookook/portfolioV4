@@ -610,36 +610,41 @@ strong {
 }
 
 #contents .pageWrap .page .pageDetail .buttonWrap {
-    border-top: 3px dashed #caa623;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
     position: absolute;
     width: 100%;
+    height: 100%;
     bottom: 0;
     left: 0;
     opacity: 0;
+    z-index: 10;
 }
 
 #contents .pageWrap .page .pageDetail .buttonWrap .detailCard {
     width: 100%;
-    height: 100px;
-    background-color: black;
-    bottom: 40px;
-    left: 0;
-    line-height: 100px;
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+    float: left;
 }
 
 #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
     font-size: 16px;
+    display: block;
 }
 
 #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+    position: absolute;
+    bottom: 0;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    float: left;
     width: 50%;
     height: 40px;
     background-color: transparent;
@@ -650,22 +655,23 @@ strong {
     box-shadow: 0px 7px 6px -1px rgba(0, 0, 0, 0.81);
 }
 
-#contents .pageWrap .page .pageDetail .buttonWrap .openPdf:first-child {
-    -webkit-border-radius: 12px 0 0 12px;
-    -moz-border-radius: 12px 0 0 12px;
-    border-radius: 12px 0 0 12px;
-}
-
-#contents .pageWrap .page .pageDetail .buttonWrap .openPdf:last-child {
-    -webkit-border-radius: 0 12px 12px 0;
-    -moz-border-radius: 0 12px 12px 0;
-    border-radius: 0 12px 12px 0;
-}
-
 #contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover {
     background-color: #caa623;
     color: black;
     cursor: pointer;
+}
+
+#contents .pageWrap .page .pageDetail .buttonWrap .openPdf svg {
+    display: none;
+    fill: #caa623;
+}
+
+#contents .pageWrap .page .pageDetail .buttonWrap .firstBtn {
+    left: 0;
+}
+
+#contents .pageWrap .page .pageDetail .buttonWrap .lastBtn {
+    right: 0;
 }
 
 @keyframes opLv {
@@ -1033,6 +1039,48 @@ strong {
         gap: 20px;
     }
 
+    #contents .pageWrap .page .pageDetail .buttonWrap .firstBtn {
+        border-right: 3px dashed #caa623;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .lastBtn {
+        border-left: 3px dashed #caa623;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+        height: 100%;
+        width: 15%;
+        text-indent: -9999px;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf svg {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover svg {
+        fill: var(--black2);
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .detailCard {
+        -webkit-transform: translate(-50%, -70%);
+        -moz-transform: translate(-50%, -70%);
+        -ms-transform: translate(-50%, -70%);
+        transform: translate(-50%, -70%);
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+        display: inline-block;
+    }
+
     #contents .pageWrap .page .title h3 {
         font-size: 20px;
     }
@@ -1096,6 +1144,16 @@ strong {
         width: 45px;
         height: 45px;
         line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+        font-size: 11px;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+        font-size: 11px;
     }
 }
 

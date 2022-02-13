@@ -194,44 +194,58 @@ $(function () {
 });
 
 // work changeText
+// $(function () {
+//   // 미디어쿼리 js 관리
+//   var mql = window.matchMedia(
+//     "screen and (min-width: 468px) and (max-width: 767px)"
+//   );
+
+//   // 복수의 h3 선택
+//   var h3List = document.querySelectorAll("#chanH3");
+//   // h3 태그 인덱스 확인
+//   var h3ListLength = h3List.length;
+
+//   function ChangeName(num, name) {
+//     return (h3List[num].innerHTML = name);
+//   }
+//   for (var i = 0; i < h3ListLength; i++) {
+//     console.log(h3List[i].innerText);
+//     mql.addListener(function (e) {
+//       if (e.matches) {
+//         ChangeName(0, "l");
+//         ChangeName(1, "n");
+//         ChangeName(2, "c");
+//         ChangeName(3, "n");
+//         ChangeName(4, "c");
+//         ChangeName(5, "c");
+//         ChangeName(6, "c");
+//         ChangeName(7, "c");
+//         ChangeName(8, "c");
+//       } else {
+//         ChangeName(0, "lotte");
+//         ChangeName(1, "naver");
+//         ChangeName(2, "coupang");
+//         ChangeName(3, "neungyule");
+//         ChangeName(4, "coming...");
+//         ChangeName(5, "coming...");
+//         ChangeName(6, "coming...");
+//         ChangeName(7, "coming...");
+//         ChangeName(8, "coming...");
+//       }
+//     });
+//   }
+// });
+// hover
 $(function () {
-  // 미디어쿼리 js 관리
-  var mql = window.matchMedia(
-    "screen and (min-width: 468px) and (max-width: 767px)"
-  );
-
-  // 복수의 h3 선택
-  var h3List = document.querySelectorAll("#chanH3");
-  // h3 태그 인덱스 확인
-  var h3ListLength = h3List.length;
-
-  function ChangeName(num, name) {
-    return (h3List[num].innerHTML = name);
-  }
-  for (var i = 0; i < h3ListLength; i++) {
-    console.log(h3List[i].innerText);
-    mql.addListener(function (e) {
-      if (e.matches) {
-        ChangeName(0, "l");
-        ChangeName(1, "n");
-        ChangeName(2, "c");
-        ChangeName(3, "n");
-        ChangeName(4, "c");
-        ChangeName(5, "c");
-        ChangeName(6, "c");
-        ChangeName(7, "c");
-        ChangeName(8, "c");
-      } else {
-        ChangeName(0, "lotte");
-        ChangeName(1, "naver");
-        ChangeName(2, "coupang");
-        ChangeName(3, "neungyule");
-        ChangeName(4, "coming...");
-        ChangeName(5, "coming...");
-        ChangeName(6, "coming...");
-        ChangeName(7, "coming...");
-        ChangeName(8, "coming...");
-      }
+  $(".openPdf")
+    .mouseover(function () {
+      $("#chanH3").css({
+        display: "none",
+      });
+    })
+    .mouseout(function () {
+      $("#chanH3").css({
+        display: "block",
+      });
     });
-  }
 });

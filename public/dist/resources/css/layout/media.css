@@ -125,6 +125,48 @@
         gap: 20px;
     }
 
+    #contents .pageWrap .page .pageDetail .buttonWrap .firstBtn {
+        border-right: 3px dashed #caa623;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .lastBtn {
+        border-left: 3px dashed #caa623;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+        height: 100%;
+        width: 15%;
+        text-indent: -9999px;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf svg {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover svg {
+        fill: var(--black2);
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .detailCard {
+        -webkit-transform: translate(-50%, -70%);
+        -moz-transform: translate(-50%, -70%);
+        -ms-transform: translate(-50%, -70%);
+        transform: translate(-50%, -70%);
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+        display: inline-block;
+    }
+
     #contents .pageWrap .page .title h3 {
         font-size: 20px;
     }
@@ -188,6 +230,16 @@
         width: 45px;
         height: 45px;
         line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+        font-size: 11px;
+    }
+
+    #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+        font-size: 11px;
     }
 }
 

@@ -71,29 +71,32 @@
         }
 
         .buttonWrap {
-          border-top: $border;
+          // border-top: $border;
           transition: all 0.5s;
           position: absolute;
           width: 100%;
+          height: 100%;
           bottom: 0;
           left: 0;
           opacity: 0;
-
+          z-index: 10;
           .detailCard {
             width: 100%;
-            height: 100px;
-            background-color: black;
-            bottom: 40px;
-            left: 0;
-            line-height: 100px;
-            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -60%);
+            float: left;
             em {
               font-size: 16px;
+              display: block;
             }
           }
           .openPdf {
+            position: absolute;
+            bottom: 0;
             transition-duration: 0.3s;
-            float: left;
+            // float: left;
             width: 50%;
             height: 40px;
             background-color: transparent;
@@ -106,6 +109,16 @@
               color: black;
               cursor: pointer;
             }
+            svg {
+              display: none;
+              fill: #caa623;
+            }
+          }
+          .firstBtn {
+            left: 0;
+          }
+          .lastBtn {
+            right: 0;
           }
         }
       }
