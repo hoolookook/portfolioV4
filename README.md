@@ -1,4 +1,6 @@
-<img src="https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=hoolookook%20portfolio&fontSize=90" /><br>
+<!-- <img src="https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=hoolookook%20portfolio&fontSize=90" /><br> -->
+
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&hoolookook%20portfolio=capsule%20render&fontSize=50" /><br>
 
 <h1>hoolookook portfolio</h1>
 <strong title="내 포트폴리오로">http://hoolookook.dothome.co.kr/</strong>
