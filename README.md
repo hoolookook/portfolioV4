@@ -1,7 +1,7 @@
 <!-- <img src="https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=hoolookook%20portfolio&fontSize=90" /><br> -->
 <!-- <img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" /> -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=hoolookook%20portfolio&fontSize=50" /><br>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=hoolookook%20portfolio&animation=fadeIn&fontSize=30" /><br>
 
 <!-- <h1>hoolookook portfolio</h1> -->
 
