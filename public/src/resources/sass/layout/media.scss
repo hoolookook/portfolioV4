@@ -1,115 +1,207 @@
 @import "../base/common.scss";
-$media_1: 194px;
-$media_2: 241px;
-$media_3: 307px;
-$media_3_2: 385px;
-$media_4: 405px;
-$media_5: 464px;
-$media_6: 799px;
-$media_7: 800px;
-$media_8: 990px;
-$media_9: 1551px;
-// footer WH
-$sphereWH: 100px;
-$centerWHL: 65px;
-$profilePicW: 176px;
-$profilePicH: 236px;
-@media screen and (max-width: 469px) {
-  #intro {
-    .introWrap {
-      font-size: 20px;
-      .typeText {
-        font-size: 14px;
-        &::after {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  #header {
-    .navBar {
-      .navUl {
-        li {
-          padding: 10px;
-          a {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-  #contents {
-    height: 100% !important;
-    .pageWrap {
-      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-      grid-template-rows: repeat(9, 50px);
-      gap: 20px;
-      .page {
-        .pageDetail {
-          .buttonWrap {
-            .firstBtn {
-              border-right: $border;
-            }
-            .lastBtn {
-              border-left: $border;
-            }
-            .openPdf {
-              height: 100%;
-              width: 15%;
-              text-indent: -9999px;
-              svg {
-                position: absolute;
-                display: block;
-                top: 50%;
-                left: 50%;
-                width: 15px;
-                height: 15px;
-                transform: translate(-50%, -50%);
-              }
-              &:hover svg {
-                fill: var(--black2);
-              }
-            }
-            .detailCard {
-              transform: translate(-50%, -70%);
-              em {
-                display: inline-block;
-              }
-            }
-          }
-        }
-        .title {
-          h3 {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-  }
-  #footer {
-    .profileWrap {
-      .profileL {
-        justify-content: center;
-        .profilePhoto {
-          img {
-            @include WH(146px, 196px);
-          }
-        }
-        .profileContact {
-          p {
-            font-size: 12px;
-            &:last-child a {
-              font-size: 12px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
+// @media screen and (max-width: 469px) {
+//   #intro {
+//     .introWrap {
+//       font-size: 20px;
+//       .typeText {
+//         font-size: 14px;
+//         &::after {
+//           font-size: 20px;
+//         }
+//       }
+//     }
+//     .scrollDown {
+//       bottom: 0px;
+//       a {
+//         font-size: 12px;
+//         i {
+//           padding: 10px;
+//           transform: scale(0.7);
+//           animation: bubbleHalf 3s ease-in infinite;
+//         }
+//       }
+//     }
+//   }
+//   #header {
+//     .navBar {
+//       .navUl {
+//         li {
+//           padding: 10px;
+//           a {
+//             font-size: 18px;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   #contents {
+//     min-height: 700px !important;
+//     // min-height: 0 !important;
+//     // height: 100% !important;
+//     .pageWrap {
+//       grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+//       // grid-template-rows: repeat(9, 50px);
+//       grid-template-rows: repeat(auto-fit, 50px);
+
+//       gap: 20px;
+//       .page {
+//         .pageDetail {
+//           .buttonWrap {
+//             .firstBtn {
+//               border-right: $border;
+//             }
+//             .lastBtn {
+//               border-left: $border;
+//             }
+//             .openPdf {
+//               height: 100%;
+//               width: 15%;
+//               text-indent: -9999px;
+//               svg {
+//                 position: absolute;
+//                 display: block;
+//                 top: 50%;
+//                 left: 50%;
+//                 width: 15px;
+//                 height: 15px;
+//                 transform: translate(-50%, -50%);
+//               }
+//               &:hover svg {
+//                 fill: var(--black2);
+//               }
+//             }
+//             .detailCard {
+//               transform: translate(-50%, -70%);
+//               em {
+//                 display: inline-block;
+//               }
+//             }
+//           }
+//         }
+//         .title {
+//           h3 {
+//             font-size: 20px;
+//           }
+//         }
+//       }
+//     }
+//     .category {
+//       top: 0%;
+//       gap: 10px;
+//       .btn {
+//         font-size: 15px;
+//       }
+//     }
+//   }
+//   #footer {
+//     .profileWrap {
+//       .profileL {
+//         justify-content: center;
+//         flex-direction: column;
+//         .profilePhoto {
+//           padding-bottom: 80px;
+//           img {
+//             @include WH(146px, 196px);
+//           }
+//         }
+//         .profileContact {
+//           padding: 0;
+//           p {
+//             font-size: 12px;
+//             &:last-child a {
+//               font-size: 12px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 500px) and(max-width:680px) {
+//   #footer {
+//     .profileWrap {
+//       .profileR {
+//         .skills {
+//           p {
+//             span {
+//               font-size: 12px;
+//             }
+//           }
+//           .sphereChartWrap {
+//             .sphere {
+//               @include WH(70px, 70px);
+//               .skillTitle {
+//                 strong {
+//                   font-size: 6px;
+//                 }
+//               }
+//               .center {
+//                 font-size: 12px;
+//                 @include WH(45px, 45px);
+//                 line-height: 45px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 560px) {
+//   #contents {
+//     .pageWrap {
+//       .page {
+//         .pageDetail {
+//           .buttonWrap {
+//             .openPdf {
+//               font-size: 11px;
+//             }
+//             .detailCard {
+//               em {
+//                 font-size: 11px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media screen and (min-width: 100px) and(max-width:500px) {
+//   #footer {
+//     .profileWrap {
+//       .profileR {
+//         .skills {
+//           p {
+//             span {
+//               font-size: 12px;
+//             }
+//           }
+//           .sphereChartWrap {
+//             width: 280px;
+//             .sphere {
+//               @include WH(70px, 70px);
+//               .skillTitle {
+//                 strong {
+//                   font-size: 6px;
+//                 }
+//               }
+//               .center {
+//                 font-size: 12px;
+//                 @include WH(45px, 45px);
+//                 line-height: 45px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 // main.js에 이름바꾸기 있음
-@media screen and (min-width: 468px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   #contents {
     .pageWrap {
       .page {
@@ -120,462 +212,46 @@ $profilePicH: 236px;
             font-size: 110px;
           }
         }
-        .pageDetail {
-          img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-        }
+        // .pageDetail {
+        //   img {
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        //   }
+        // }
       }
     }
   }
 }
-@media screen and (min-width: 500px) and(max-width:680px) {
-  #footer {
-    .profileWrap {
-      .profileR {
-        .skills {
-          p {
-            span {
-              font-size: 12px;
-            }
-          }
-          .sphereChartWrap {
-            .sphere {
-              @include WH(70px, 70px);
-              .skillTitle {
-                strong {
-                  font-size: 6px;
-                }
-              }
-              .center {
-                font-size: 12px;
-                @include WH(45px, 45px);
-                line-height: 45px;
-              }
-            }
-          }
-        }
-      }
+
+// ============================================
+// ============================================
+@media screen and (max-width: 1199px) {
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (max-width: 767px) {
+}
+@media screen and (max-width: 575px) {
+}
+@media screen and (max-width: 481px) {
+  #header {
+    .navBar {
+      display: none;
+    }
+    .moBtn {
+      display: block;
     }
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 393px) {
   #contents {
     .pageWrap {
-      .page {
-        .pageDetail {
-          .buttonWrap {
-            .openPdf {
-              font-size: 11px;
-            }
-            .detailCard {
-              em {
-                font-size: 11px;
-              }
-            }
-          }
-        }
-      }
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
     }
   }
 }
-@media screen and (min-width: 100px) and(max-width:500px) {
-  #footer {
-    .profileWrap {
-      .profileR {
-        .skills {
-          p {
-            span {
-              font-size: 12px;
-            }
-          }
-          .sphereChartWrap {
-            width: 280px;
-            .sphere {
-              @include WH(70px, 70px);
-              .skillTitle {
-                strong {
-                  font-size: 6px;
-                }
-              }
-              .center {
-                font-size: 12px;
-                @include WH(45px, 45px);
-                line-height: 45px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+@media screen and (max-width: 294px) {
 }
-// @media screen and (max-width: 1023px) {
-//   /* 타블렛 */
-// }
-
-// @media screen and (max-width: 767px) {
-//   /* 모바일 */
-// }
-
-// @media screen and (max-width: 1019px) {
-//   #contents {
-//     .pageWrap {
-//       background-color: red;
-//       display: grid;
-//       grid-template-columns: repeat(auto-fit, minmax(100px px, 1fr));
-//       max-width: 500px;
-//       .page {
-//       }
-//     }
-//   }
-// }
-// header-----------------------------------------
-// @media screen and (max-width: $media_4) {
-//   #header {
-//     .navBar {
-//       ul {
-//         li {
-//           padding: 15px;
-//           a {
-//             font-size: 20px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: $media_4) {
-//   #header {
-//     .navBar {
-//       ul {
-//         li {
-//           padding: 12px;
-//           a {
-//             font-size: 15px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: $media_2) {
-//   #header {
-//     .navBar {
-//       ul {
-//         li {
-//           padding: 9px;
-//           a {
-//             font-size: 12px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: $media_1) {
-//   #header {
-//     .navBar {
-//       ul {
-//         li {
-//           padding: 5px;
-//           a {
-//             font-size: 7px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// // -----------------------------------------------
-
-// // intro------------------------------------------
-// @media screen and (max-width: $media_4) {
-//   #intro {
-//     .introWrap {
-//       h2,
-//       .typeText {
-//         font-size: 15px;
-//       }
-//     }
-//   }
-// }
-// // -----------------------------------------------
-
-// // contents---------------------------------------
-// @media screen and (min-width: $media_8) and (max-width: $media_9) {
-//   #contents {
-//     .pageWrap {
-//       grid-template-columns: repeat(2, 400px);
-//       grid-template-rows: repeat(2, 400px);
-//     }
-//   }
-// }
-
-// @media screen and (max-width: $media_6) {
-//   #contents {
-//     padding: 100px 30px;
-//     .pageWrap {
-//       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-//       grid-template-rows: repeat(auto-fit, minmax(200px, 4fr));
-//       .page {
-//         .title {
-//           a {
-//             font-size: 29px;
-//           }
-//         }
-//         .pageDetail {
-//           height: 100%;
-//           overflow: hidden;
-//           img {
-//             height: max-content !important;
-//           }
-//           .buttonWrap {
-//             .openPdf {
-//               font-size: 13px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: $media_5) {
-//   #contents {
-//     .pageWrap {
-//       .page {
-//         .title {
-//           a {
-//             font-size: 25px;
-//           }
-//         }
-//         .pageDetail {
-//           width: 80%;
-//           margin: 0 auto;
-//           transition: all 0.7s;
-//           .buttonWrap {
-//             .openPdf {
-//               font-size: 10px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: $media_3_2) {
-//   #contents {
-//     .pageWrap {
-//       .page {
-//         .title {
-//           a {
-//             font-size: 23px;
-//           }
-//         }
-//         .pageDetail {
-//           transition: all 0.7s;
-//           width: 60%;
-//           .buttonWrap {
-//             .openPdf {
-//               font-size: 8px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: $media_3) {
-//   #contents {
-//     .pageWrap {
-//       .page {
-//         .title {
-//           a {
-//             font-size: 19px;
-//           }
-//         }
-//         .pageDetail {
-//           transition: all 0.7s;
-//           width: 50%;
-//           .buttonWrap {
-//             .openPdf {
-//               font-size: 6px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// // -----------------------------------------------
-
-// // footer-----------------------------------------
-// @media screen and (max-width: 1118px) {
-//   #footer {
-//     .profileWrap {
-//       flex-flow: column wrap;
-
-//       .profileL {
-//         padding: 100px;
-//         .profilePhoto {
-//           img {
-//           }
-//         }
-//         .profileContact {
-//         }
-//       }
-//       .profileR {
-//         .skills {
-//           .sphereChartWrap {
-//             .sphere {
-//               .skillTitle {
-//               }
-//               .center {
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: 676px) {
-//   #footer {
-//     .profileWrap {
-//       flex-flow: column wrap;
-//       align-items: stretch;
-//       .profileL {
-//         @include commonFlex(column wrap, center, center);
-//         padding: 50px;
-//         .profilePhoto {
-//           img {
-//           }
-//         }
-//         .profileContact {
-//         }
-//       }
-//       .profileR {
-//         .skills {
-//           p {
-//             span {
-//               font-size: 14px;
-//             }
-//           }
-//           .sphereChartWrap {
-//             // @include commonFlex(column row, center, center);
-
-//             .sphere {
-//               @include WH(calc($sphereWH/1.7), calc($sphereWH/1.7));
-
-//               .skillTitle {
-//                 strong {
-//                   font-size: 2px;
-//                 }
-//               }
-//               .center {
-//                 @include WH(calc($centerWHL/1.7), calc($centerWHL/1.7));
-//                 line-height: calc($centerWHL/1.7);
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 405px) {
-//   @include footRatio(1.2, 1, 1.8, 4px, 12px);
-//   #footer {
-//     .profileWrap {
-//       .profileL {
-//         padding: 0;
-//       }
-//       .profileR {
-//         .skills {
-//           .sphereChartWrap {
-//             @include commonFlex(row wrap, space-around, center);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-height: 638px) {
-//   #footer {
-//     .profileWrap {
-//       .profileL {
-//         padding: 0;
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-height: 532px) {
-//   @include footRatio(1.5, 0.5, 1.4, 2px, 6px);
-// }
-// @media screen and (max-height: 514px) and (max-width: 481px) {
-//   @include footRatio(2, 1.4, 1.8, 1px, 4px);
-// }
-// @media screen and (max-height: 442px) and (max-width: 339px) {
-//   @include footRatio(3, 2, 3, 1px, 2px);
-
-//   #footer {
-//     .profileWrap {
-//       .profileL {
-//         padding: 0;
-//         .profileContact {
-//           padding: 5px 0px;
-//         }
-//       }
-//       .profileR {
-//         .skills {
-//           .sphereChartWrap {
-//             // @include commonFlex(column wrap, space-around, center);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-height: 445px) and (max-width: 209px) {
-//   #footer {
-//     .profileWrap {
-//       .profileL {
-//         padding: 0;
-//         .profileContact {
-//           padding: 15px 10px;
-//         }
-//       }
-//       .profileR {
-//         .skills {
-//           .sphereChartWrap {
-//             @include commonFlex(column wrap, space-around, center);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-height: 341px) and (max-width: 632px) {
-//   #footer {
-//     .profileWrap {
-//       .profileR {
-//         .skills {
-//           .sphereChartWrap {
-//             @include commonFlex(column wrap, flex-start, flex-start);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// -----------------------------------------------
-
-// header-----------------------------------------
-
-// -----------------------------------------------

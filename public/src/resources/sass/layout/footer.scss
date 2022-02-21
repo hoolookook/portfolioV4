@@ -1,11 +1,14 @@
 @import "../base/common.scss";
 #footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   border-top: none;
   text-align: center;
   .profileWrap {
-    width: 100%;
-    height: 100%;
+    @include WH(100%, 70%);
     @include commonFlex(row wrap, center, center);
+    gap: 120px;
     .profileL {
       display: flex;
       flex-flow: row wrap;
@@ -18,7 +21,7 @@
       }
       .profileContact {
         padding: 50px 25px;
-        @include commonFlex(column wrap, space-around, flex-start);
+        @include commonFlex(column wrap, center, flex-start);
         p {
           @include commonFont(16px, $fontC);
           padding: 5px 5px;
@@ -32,14 +35,9 @@
       }
     }
     .profileR {
-      // display: flex;
-      // flex-flow: row wrap;
-      // align-items: center;
-      // justify-content: center;
-      // @include commonFlex(row wrap, center, center);
       .skills {
         p {
-          padding-bottom: 20px;
+          padding-bottom: 60px;
           span {
             @include commonFont(16px, var(--fontC));
             font-weight: bold;
@@ -60,6 +58,20 @@
               width: 100%;
               height: 100%;
               display: inline-block;
+              svg {
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 50%;
+                width: 35px;
+                height: 35px;
+                transform: translate(-50%, -190%);
+                z-index: 1;
+                fill: #caa623;
+              }
+              &:hover svg {
+                // fill: var(--black2);
+              }
               strong {
                 @include commonFont(12px, $fontC);
                 vertical-align: top;
