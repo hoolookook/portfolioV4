@@ -1,0 +1,117 @@
+@keyframes opLv {
+  0%, 100% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contents .pageWrap .page .title h3 {
+    width: 82px;
+    overflow: hidden;
+    font-size: 14.34vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+    font-size: 2.0860495437vw;
+  }
+  #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+    font-size: 2.0860495437vw;
+  }
+}
+@media screen and (max-width: 653px) {
+  #header .navBar .navUl li {
+    padding: 3.6753445636vw;
+  }
+  #header .navBar .navUl li #clickThis {
+    font-size: 3.6753445636vw;
+  }
+}
+@media screen and (max-width: 481px) {
+  #header .navBar {
+    display: none;
+  }
+  #header .moBtn {
+    display: block;
+  }
+}
+@media screen and (max-width: 441px) {
+  #footer .profileWrap .profileL {
+    justify-content: center;
+  }
+  #footer .profileWrap .profileR .skills .sphereChartWrap {
+    -moz-column-gap: 2.2675736961vw;
+         column-gap: 2.2675736961vw;
+  }
+  #footer .profileWrap .profileR .skills .sphereChartWrap .sphere {
+    width: 22.6757369615vw;
+    height: 22.6757369615vw;
+  }
+  #footer .profileWrap .profileR .skills .sphereChartWrap .sphere .center {
+    width: 14.7392290249vw;
+    height: 14.7392290249vw;
+    line-height: 14.7392290249vw;
+    font-size: 3.6281179138vw;
+  }
+  #footer .profileWrap .profileR .skills .sphereChartWrap .sphere .skillTitle svg {
+    width: 7.9365079365vw;
+    height: 7.9365079365vw;
+  }
+}
+@media screen and (max-width: 393px) {
+  #contents {
+    padding: 7.6335877863vw;
+    min-width: 71.2468193384vw;
+  }
+  #contents .category {
+    gap: 5.0890585242vw;
+  }
+  #contents .category > button {
+    font-size: 6.106870229vw;
+  }
+  #contents .pageWrap {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
+  }
+  #contents .pageWrap .page .title h3 {
+    width: 100%;
+    font-size: 6.106870229vw;
+  }
+  #contents .pageWrap .page .pageDetail .buttonWrap {
+    z-index: 10;
+  }
+  #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+    top: 50%;
+    bottom: unset;
+    transform: translateY(-50%);
+    height: 100%;
+    font-size: 4.0712468193vw;
+  }
+  #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+    display: none;
+  }
+  #contents .pageWrap .page .pageDetail .badge {
+    display: flex;
+    align-items: center;
+    padding: 1.272264631vw;
+    height: 100%;
+    font-size: 3.8167938931vw;
+    border-bottom: unset;
+  }
+}

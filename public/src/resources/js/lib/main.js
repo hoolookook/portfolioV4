@@ -35,10 +35,55 @@ $(function () {
     $(".responsive").finish().fadeIn(1000);
     $(".pc").finish().fadeOut(1000);
   });
-  $(".moBtn").on("click", function () {
-    $(".mobileNav").slideToggle("slow");
-    $(".ham .line").toggleClass("active");
+  const ham = document.querySelector('.ham');
+  const bodyOver = document.querySelector('body');
+  const clickThisItem = document.querySelectorAll('#clickThis');
+  const mobileBtn = document.querySelector('.moBtn');
+  const slidePop = document.querySelector('.mobileNav');
+  mobileBtn.addEventListener('click', (e) => {
+    if (mobileBtn.classList.contains('active')) {
+      // active 클래스가 있을 때
+      slidePop.classList.remove('active');
+      mobileBtn.classList.remove('active');
+      bodyOver.style.overflowY = "";
+    } else {
+      // active 클래스가 없을 때
+      slidePop.classList.add('active');
+      mobileBtn.classList.add('active');
+      bodyOver.style.overflowY = "hidden";
+    }
+    clickThisItem.forEach((el)=>{
+      el.addEventListener('click',()=>{
+        slidePop.classList.remove('active');
+        mobileBtn.classList.remove('active');
+        bodyOver.style.overflowY = "";
+      })
+    })
   });
+  
+
+  // $(".moBtn").on("click", function () {
+  //   $(".mobileNav").slideToggle("slow");
+  //   $(".ham .line").toggleClass("active");
+
+  //   const hamLine = document.querySelector('.ham .line');
+  //   const bodyOver = document.querySelector('body');
+  //   const clickThisItem = document.querySelectorAll('#clickThis');
+  //   if(hamLine.classList.contains('active')){
+  //     bodyOver.style.overflowY = "hidden";
+  //   }
+  //   else{
+  //     bodyOver.style.overflow = "";
+      
+  //   }
+  //   clickThisItem.forEach((el)=>{
+  //     el.addEventListener('click',()=>{
+  //       $(".ham .line").toggleClass("active");
+  //       $(".mobileNav").slideToggle("slow");
+  //     })
+  //   })
+    
+  // });
   // scroll event
   $(window).scroll(function () {
     // 위치값
@@ -104,10 +149,10 @@ $(function () {
   // circle chart
   function circleChart() {
     $(window).ready(function () {
-      draw(70, ".html", "#0b593d");
+      draw(80, ".html", "#0b593d");
       draw(80, ".css", "#0b593d");
-      draw(60, ".sass", "#0b593d");
-      draw(50, ".js", "#0b593d");
+      draw(90, ".sass", "#0b593d");
+      draw(90, ".js", "#0b593d");
       draw(60, ".jquery", "#0b593d");
       draw(60, ".ps", "#0b593d");
     });
@@ -138,11 +183,11 @@ $(function () {
     }
 
     function replay() {
-      draw(70, ".html", "#0b593d");
+      draw(80, ".html", "#0b593d");
       draw(80, ".css", "#0b593d");
-      draw(60, ".sass", "#0b593d");
-      draw(50, ".js", "#0b593d");
-      draw(60, ".jquery", "#0b593d");
+      draw(90, ".sass", "#0b593d");
+      draw(90, ".js", "#0b593d");
+      draw(70, ".jquery", "#0b593d");
       draw(60, ".ps", "#0b593d");
     }
   }
@@ -210,21 +255,28 @@ $(function () {
 
 // work changeText
 $(function () {
-  // 미디어쿼리 js 관리
-  var mql = window.matchMedia("screen and (max-width: 767px)");
-
   // 복수의 h3 선택
   var h3List = document.querySelectorAll("#chanH3");
   // h3 태그 인덱스 확인
   var h3ListLength = h3List.length;
 
   function ChangeName(num, name) {
-    return (h3List[num].innerHTML = name);
+      h3List[num].innerHTML = name;
   }
-  for (var i = 0; i < h3ListLength; i++) {
-    console.log(h3List[i].innerText);
-    mql.addListener(function (e) {
-      if (e.matches) {
+
+  function updateNames() {
+    if(window.innerWidth > 767){
+      ChangeName(0, "lotte");
+      ChangeName(1, "naver");
+      ChangeName(2, "coupang");
+      ChangeName(3, "neungyule");
+      ChangeName(4, "skmaterials");
+      ChangeName(5, "coming...");
+      ChangeName(6, "coming...");
+      ChangeName(7, "coming...");
+      ChangeName(8, "coming...");
+    }
+    if (window.innerWidth <= 767) {
         ChangeName(0, "l");
         ChangeName(1, "n");
         ChangeName(2, "c");
@@ -234,19 +286,25 @@ $(function () {
         ChangeName(6, "c");
         ChangeName(7, "c");
         ChangeName(8, "c");
-      } else {
-        ChangeName(0, "lotte");
-        ChangeName(1, "naver");
-        ChangeName(2, "coupang");
-        ChangeName(3, "neungyule");
-        ChangeName(4, "coming...");
-        ChangeName(5, "coming...");
-        ChangeName(6, "coming...");
-        ChangeName(7, "coming...");
-        ChangeName(8, "coming...");
-      }
-    });
+    } 
+    if (window.innerWidth <= 393){
+      ChangeName(0, "lotte");
+      ChangeName(1, "naver");
+      ChangeName(2, "coupang");
+      ChangeName(3, "neungyule");
+      ChangeName(4, "skmaterials");
+      ChangeName(5, "coming...");
+      ChangeName(6, "coming...");
+      ChangeName(7, "coming...");
+      ChangeName(8, "coming...");
+    }
   }
+
+  // 초기 로드 시 한 번 실행
+  updateNames();
+
+  // 윈도우 리사이즈 이벤트에 핸들러 추가
+  window.addEventListener('resize', updateNames);
 });
 // hover
 // $(function () {

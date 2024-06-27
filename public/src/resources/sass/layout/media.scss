@@ -209,7 +209,7 @@
           h3 {
             width: 82px;
             overflow: hidden;
-            font-size: 110px;
+            font-size: 14.34vw;
           }
         }
         // .pageDetail {
@@ -232,8 +232,42 @@
 @media screen and (max-width: 991px) {
 }
 @media screen and (max-width: 767px) {
+  $pc-size: 767;
+  #contents{
+    .pageWrap{
+      .page{
+        .pageDetail{
+          .buttonWrap{
+            .openPdf{
+              font-size: vw(16,$pc-size);
+            }
+            .detailCard{
+              em{
+                font-size: vw(16,$pc-size);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 653px) {
+  $pc-size: 653;
+  #header{
+    .navBar{
+      .navUl{
+        li{
+          padding: vw(24,$pc-size);
+          #clickThis{
+            font-size: vw(24,$pc-size);
+
+          }
+        }
+      }
+    }
+  }
+
 }
 @media screen and (max-width: 481px) {
   #header {
@@ -245,11 +279,91 @@
     }
   }
 }
+@media screen and (max-width: 441px) {
+  $pc-size: 441;
+  
+  #footer{
+    .profileWrap{
+      .profileL{
+        justify-content: center;
+      }
+      .profileR{
+        .skills{
+          .sphereChartWrap{
+            column-gap: vw(10,$pc-size);
+            .sphere{
+              .center{
+                width: vw(65,$pc-size);
+                height: vw(65,$pc-size);
+                line-height: vw(65,$pc-size);
+                font-size: vw(16,$pc-size);
+              }
+              width: vw(100,$pc-size);
+              height: vw(100,$pc-size);
+              .skillTitle{
+                svg{
+                  width: vw(35,$pc-size);
+                  height: vw(35,$pc-size);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 393px) {
+  $pc-size: 393;
   #contents {
+    padding: vw(30,$pc-size);
+    min-width: vw(280,$pc-size);
+    .category{
+      gap: vw(20,$pc-size);
+      >button{
+        // font-size: 6.1vw;
+        font-size: vw(24,$pc-size);
+      }
+    }
     .pageWrap {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
       grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
+      .page{
+        .title{
+          h3{
+            // font-size: 7.63vw;
+            width: 100%;
+            font-size : vw(24,$pc-size);
+          }
+        }
+        .pageDetail{
+          .buttonWrap{  
+            z-index: 10;
+            .openPdf{
+              top: 50%;
+              bottom: unset;
+              transform: translateY(-50%);
+              // height: vw(40,$pc-size);
+              height: 100%;
+              font-size: vw(16,$pc-size);
+            }
+            .detailCard{
+              em{
+                display: none;
+              }
+            }
+          }
+          .badge{
+            display: flex;
+            align-items: center;
+            padding: vw(5,$pc-size);
+            height: 100%;
+            font-size: vw(15,$pc-size);
+            border-bottom: unset;
+          }
+        }
+      }
     }
   }
 }
