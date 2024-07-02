@@ -21,17 +21,42 @@
   }
 }
 @media screen and (max-width: 767px) {
-  #contents .pageWrap .page .title h3 {
+  .contents .pageWrap .page .title h3 {
     width: 82px;
     overflow: hidden;
     font-size: 14.34vw;
   }
 }
+@media screen and (max-width: 1020px) {
+  .contents {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .contents .category {
+    margin-top: 12vw;
+    gap: 2vw;
+  }
+  .contents .pageWrap {
+    padding-top: 11vw;
+    gap: 2vw;
+    max-width: 100vw;
+  }
+  .contents .pageWrap .page {
+    width: 30vw;
+    height: 30vw;
+  }
+  .contents .pageWrap .page .title h2 {
+    font-size: 3vw;
+  }
+  .contents .pageWrap .page .pageDetail {
+    border-width: 0.3vw;
+  }
+}
 @media screen and (max-width: 767px) {
-  #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+  .contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
     font-size: 2.0860495437vw;
   }
-  #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+  .contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
     font-size: 2.0860495437vw;
   }
 }
@@ -75,38 +100,41 @@
   }
 }
 @media screen and (max-width: 393px) {
-  #contents {
+  .contents {
     padding: 7.6335877863vw;
-    min-width: 71.2468193384vw;
   }
-  #contents .category {
+  .contents .category {
     gap: 5.0890585242vw;
   }
-  #contents .category > button {
+  .contents .category > button {
     font-size: 6.106870229vw;
+    border-width: 0.7633587786vw;
   }
-  #contents .pageWrap {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
+  .contents .pageWrap {
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
-  #contents .pageWrap .page .title h3 {
+  .contents .pageWrap .page {
+    width: 100%;
+  }
+  .contents .pageWrap .page .title h3 {
     width: 100%;
     font-size: 6.106870229vw;
   }
-  #contents .pageWrap .page .pageDetail .buttonWrap {
+  .contents .pageWrap .page .pageDetail .buttonWrap {
     z-index: 10;
   }
-  #contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+  .contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
     top: 50%;
     bottom: unset;
     transform: translateY(-50%);
     height: 100%;
     font-size: 4.0712468193vw;
   }
-  #contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+  .contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
     display: none;
   }
-  #contents .pageWrap .page .pageDetail .badge {
+  .contents .pageWrap .page .pageDetail .badge {
     display: flex;
     align-items: center;
     padding: 1.272264631vw;

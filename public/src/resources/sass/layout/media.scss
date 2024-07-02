@@ -35,7 +35,7 @@
 //       }
 //     }
 //   }
-//   #contents {
+//   .contents {
 //     min-height: 700px !important;
 //     // min-height: 0 !important;
 //     // height: 100% !important;
@@ -150,7 +150,7 @@
 //   }
 // }
 // @media screen and (max-width: 560px) {
-//   #contents {
+//   .contents {
 //     .pageWrap {
 //       .page {
 //         .pageDetail {
@@ -202,7 +202,7 @@
 // }
 // main.js에 이름바꾸기 있음
 @media screen and (max-width: 767px) {
-  #contents {
+  .contents {
     .pageWrap {
       .page {
         .title {
@@ -229,11 +229,39 @@
 // ============================================
 @media screen and (max-width: 1199px) {
 }
+@media screen and (max-width: 1020px) {
+  $pc-size: 1000;
+  .contents{
+    padding-left: vw(30,$pc-size);
+    padding-right: vw(30,$pc-size);
+    .category{
+      margin-top: vw(120,$pc-size);
+      gap: vw(20,$pc-size);
+    }
+    .pageWrap{
+      padding-top: vw(110,$pc-size);
+      gap: vw(20,$pc-size);
+      max-width: vw(1000,$pc-size);
+      .page{
+        width: vw(300,$pc-size);
+        height: vw(300,$pc-size);
+        .title{
+          h2{
+            font-size: vw(30,$pc-size);
+          }
+        }
+        .pageDetail{
+          border-width: vw(3,$pc-size);
+        }
+      }
+    } 
+  } 
+}
 @media screen and (max-width: 991px) {
 }
 @media screen and (max-width: 767px) {
   $pc-size: 767;
-  #contents{
+  .contents{
     .pageWrap{
       .page{
         .pageDetail{
@@ -316,20 +344,22 @@
 
 @media screen and (max-width: 393px) {
   $pc-size: 393;
-  #contents {
+  .contents {
     padding: vw(30,$pc-size);
-    min-width: vw(280,$pc-size);
+    // min-width: vw(280,$pc-size);
     .category{
       gap: vw(20,$pc-size);
       >button{
         // font-size: 6.1vw;
         font-size: vw(24,$pc-size);
+        border-width: vw(3,$pc-size);
       }
     }
     .pageWrap {
-      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
+      flex-wrap: nowrap;
+      flex-direction: column;
       .page{
+        width: 100%;
         .title{
           h3{
             // font-size: 7.63vw;

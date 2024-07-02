@@ -14,22 +14,22 @@ html {
 }
 
 body {
-  min-width: $minWidth;
+  // min-width: $minWidth;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   #section,
-  #contents,
+  .contents,
   #intro,
   #footer {
     width: 100%;
-    min-width: $minWidth;
-    height: 100vh;
+    // min-width: $minWidth;
+    // height: 100vh;
     min-height: 1200px;
   }
   #header {
     width: 100%;
-    min-width: $minWidth;
+    // min-width: $minWidth;
     height: 75px;
   }
   #intro {

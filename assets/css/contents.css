@@ -20,65 +20,60 @@
     opacity: 0;
   }
 }
-#contents {
+.contents {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  position: relative;
-  min-width: 280px;
-  width: 100%;
+  align-items: center;
   padding: 0 30px;
+  width: 100%;
   min-height: 960px !important;
 }
-#contents .category {
-  position: absolute;
-  top: 140px;
-  left: 50%;
+.contents .category {
   gap: 20px;
-  transform: translate(-50%);
+  margin-top: 120px;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
-#contents .category button {
+.contents .category button {
   background-color: transparent;
   border: 3px dashed #caa623;
   cursor: pointer;
 }
-#contents .pageWrap {
-  display: grid;
+.contents .pageWrap {
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 110px;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(25%, 1fr));
-  grid-gap: 20px;
+  gap: 20px;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  height: 100%;
-  height: 80%;
-  height: 70%;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
 }
-#contents .pageWrap .page {
+.contents .pageWrap .page {
   position: relative;
+  width: 300px;
+  height: 300px;
   text-align: center;
 }
-#contents .pageWrap .page:hover .title {
+.contents .pageWrap .page:hover .title {
   opacity: 0;
   left: 20%;
 }
-#contents .pageWrap .page:hover img {
+.contents .pageWrap .page:hover img {
   opacity: 0.6;
   transition: all 0.5s;
 }
-#contents .pageWrap .page:hover .pageDetail .buttonWrap {
+.contents .pageWrap .page:hover .pageDetail .buttonWrap {
   opacity: 0.7;
   background-color: black;
 }
-#contents .pageWrap .page .title {
+.contents .pageWrap .page .title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,25 +82,25 @@
   z-index: 5;
   display: inline-block;
 }
-#contents .pageWrap .page .title h3 {
+.contents .pageWrap .page .title h3 {
   font-size: 30px;
   text-decoration: none;
   transition: all 0.2s;
 }
-#contents .pageWrap .page .title h3:visited {
+.contents .pageWrap .page .title h3:visited {
   color: #caa623;
 }
-#contents .pageWrap .page .title h3:hover {
+.contents .pageWrap .page .title h3:hover {
   cursor: default;
 }
-#contents .pageWrap .page .pageDetail {
+.contents .pageWrap .page .pageDetail {
   border: 3px dashed #caa623;
   border-radius: 12px;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-#contents .pageWrap .page .pageDetail img {
+.contents .pageWrap .page .pageDetail img {
   width: 100%;
   opacity: 0.3;
   position: absolute;
@@ -113,7 +108,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#contents .pageWrap .page .pageDetail .buttonWrap {
+.contents .pageWrap .page .pageDetail .buttonWrap {
   transition: all 0.5s;
   position: absolute;
   width: 100%;
@@ -122,7 +117,7 @@
   left: 0;
   opacity: 0;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .detailCard {
+.contents .pageWrap .page .pageDetail .buttonWrap .detailCard {
   width: 100%;
   position: absolute;
   left: 50%;
@@ -130,11 +125,14 @@
   transform: translate(-50%, -60%);
   float: left;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
+.contents .pageWrap .page .pageDetail .buttonWrap .detailCard em {
   font-size: 16px;
   display: block;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
+.contents .pageWrap .page .pageDetail .buttonWrap .detailCard em + em {
+  margin-top: 5px;
+}
+.contents .pageWrap .page .pageDetail .buttonWrap .openPdf {
   position: absolute;
   bottom: 0;
   transition-duration: 0.3s;
@@ -145,25 +143,25 @@
   text-align: center;
   box-shadow: 0px 7px 6px -1px rgba(0, 0, 0, 0.81);
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .openPdf:has(:not(.firstBtn)) {
+.contents .pageWrap .page .pageDetail .buttonWrap .openPdf:has(:not(.firstBtn)) {
   width: 100%;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover {
+.contents .pageWrap .page .pageDetail .buttonWrap .openPdf:hover {
   background-color: #caa623;
   color: black;
   cursor: pointer;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .openPdf svg {
+.contents .pageWrap .page .pageDetail .buttonWrap .openPdf svg {
   display: none;
   fill: #caa623;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .firstBtn {
+.contents .pageWrap .page .pageDetail .buttonWrap .firstBtn {
   left: 0;
 }
-#contents .pageWrap .page .pageDetail .buttonWrap .lastBtn {
+.contents .pageWrap .page .pageDetail .buttonWrap .lastBtn {
   right: 0;
 }
-#contents .pageWrap .page .pageDetail .badge {
+.contents .pageWrap .page .pageDetail .badge {
   position: absolute;
   right: 0;
   padding: 5px;
@@ -175,8 +173,8 @@
 }
 
 @media screen and (max-width: 393px) {
-  #contents .pageWrap {
+  .contents .pageWrap {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
   }
-}/*# sourceMappingURL=contents.css.map */
+}

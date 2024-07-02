@@ -24,17 +24,68 @@ $(function () {
     return false; // 본래 이벤트 방지
   });
 
-  $(".allBtn").click(function () {
-    $(".pc, .responsive").finish().fadeIn(1000);
+  const motherSections = document.querySelectorAll('section');
+
+  
+  motherSections.forEach((el)=>{
+    const sectionWork = el.querySelector('#contents');
+    const sectionExperience = el.querySelector('#experience');
+
+    
+
+    const pcBtn = document.querySelectorAll('.pc');
+    const responsBtn = document.querySelectorAll('.responsive');
+
+    
+
+
+  })
+  // const allBtn = document.querySelectorAll('.allBtn');
+  // allBtn.forEach((allBtns)=>{
+  //   allBtns.addEventListener('click',(e)=>{
+  //     console.log(e.target.parentElement.parentElement);
+  //     const targetPc = e.target.parentElement.parentElement.querySelectorAll('.pc');
+  //     const targetResponsive = e.target.parentElement.parentElement.querySelectorAll('.responsive');
+  //     targetPc.forEach((pcs)=>{
+        
+  //     })
+  //     targetResponsive.forEach((pcs)=>{
+        
+  //     })
+  //   })
+  // })
+
+  $("#contents .allBtn").click(function () {
+    $("#contents .pc, .responsive").finish().fadeIn(1000);
   });
-  $(".pcBtn").click(function () {
-    $(".pc").finish().fadeIn(1000);
-    $(".responsive").fadeOut(1000);
+  $("#contents .pcBtn").click(function () {
+    $("#contents .pc").finish().fadeIn(1000);
+    $("#contents .responsive").fadeOut(1000);
   });
-  $(".responBtn").click(function () {
-    $(".responsive").finish().fadeIn(1000);
-    $(".pc").finish().fadeOut(1000);
+  $("#contents .responBtn").click(function () {
+    $("#contents .responsive").finish().fadeIn(1000);
+    $("#contents .pc").finish().fadeOut(1000);
   });
+
+  $("#experience .allBtn").click(function () {
+    $("#experience .pc, .app, .responsive").finish().fadeIn(1000);
+  });
+  $("#experience .pcBtn").click(function () {
+    $("#experience .pc").finish().fadeIn(1000);
+    $("#experience .app").fadeOut(1000);
+    $("#experience .responsive").fadeOut(1000);
+  });
+  $("#experience .appBtn").click(function () {
+    $("#experience .app").finish().fadeIn(1000);
+    $("#experience .pc").finish().fadeOut(1000);
+    $("#experience .responsive").fadeOut(1000);
+  });
+  $("#experience .responBtn").click(function () {
+    $("#experience .responsive").finish().fadeIn(1000);
+    $("#experience .pc").finish().fadeOut(1000);
+    $("#experience .app").finish().fadeOut(1000);
+  });
+
   const ham = document.querySelector('.ham');
   const bodyOver = document.querySelector('body');
   const clickThisItem = document.querySelectorAll('#clickThis');
@@ -266,37 +317,64 @@ $(function () {
 
   function updateNames() {
     if(window.innerWidth > 767){
-      ChangeName(0, "lotte");
+      ChangeName(0, "lottecinema");
       ChangeName(1, "naver");
       ChangeName(2, "coupang");
       ChangeName(3, "neungyule");
       ChangeName(4, "skmaterials");
-      ChangeName(5, "coming...");
-      ChangeName(6, "coming...");
-      ChangeName(7, "coming...");
-      ChangeName(8, "coming...");
+      ChangeName(5, "Samsung<br>PreOrder");
+      ChangeName(6, "hdc<br>parkRoche");
+      ChangeName(7, "hdc<br>oakvalley");
+      ChangeName(8, "hdc<br>golf");
+      ChangeName(9, "epostbank");
+      ChangeName(10, "epostlife");
+      ChangeName(11, "epostbank<br>mall");
+      ChangeName(12, "epostbank<br>mobile");
+      ChangeName(13, "epostlife<br>mobile");
+      ChangeName(14, "arte");
+      ChangeName(15, "Hyundai<br>Motor<br>Company");
+      ChangeName(16, "shinhan<br>Ddangyo");
+      ChangeName(17, "kccworld");
     }
     if (window.innerWidth <= 767) {
         ChangeName(0, "l");
         ChangeName(1, "n");
         ChangeName(2, "c");
         ChangeName(3, "n");
-        ChangeName(4, "c");
-        ChangeName(5, "c");
-        ChangeName(6, "c");
-        ChangeName(7, "c");
-        ChangeName(8, "c");
+        ChangeName(4, "s");
+        ChangeName(5, "s");
+        ChangeName(6, "p");
+        ChangeName(7, "o");
+        ChangeName(8, "h");
+        ChangeName(9, "e");
+        ChangeName(10, "e");
+        ChangeName(11, "e");
+        ChangeName(12, "e");
+        ChangeName(13, "e");
+        ChangeName(14, "a");
+        ChangeName(15, "H");
+        ChangeName(16, "s");
+        ChangeName(17, "k");
     } 
     if (window.innerWidth <= 393){
-      ChangeName(0, "lotte");
+      ChangeName(0, "lottecinema");
       ChangeName(1, "naver");
       ChangeName(2, "coupang");
       ChangeName(3, "neungyule");
       ChangeName(4, "skmaterials");
-      ChangeName(5, "coming...");
-      ChangeName(6, "coming...");
-      ChangeName(7, "coming...");
-      ChangeName(8, "coming...");
+      ChangeName(5, "Samsung<br>PreOrder");
+      ChangeName(6, "hdc<br>parkRoche");
+      ChangeName(7, "hdc<br>oakvalley");
+      ChangeName(8, "hdc<br>golf");
+      ChangeName(9, "epostbank");
+      ChangeName(10, "epostlife");
+      ChangeName(11, "epostbank<br>mall");
+      ChangeName(12, "epostbank<br>mobile");
+      ChangeName(13, "epostlife<br>mobile");
+      ChangeName(14, "arte");
+      ChangeName(15, "Hyundai<br>Motor<br>Company");
+      ChangeName(16, "shinhan<br>Ddangyo");
+      ChangeName(17, "kccworld");
     }
   }
 
